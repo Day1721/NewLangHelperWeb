@@ -79,9 +79,18 @@ WSGI_APPLICATION = 'NewLangHelperWeb.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST':'mydbinstance.cifdsdjfxsq4.eu-central-1.rds.amazonaws.com',
+        'PORT':'5432',
+        'NAME': 'newlanghelperdb',
+        'USER': 'root',
+        'PASSWORD' : 'dbpassword234',
+    },
+    
+    'dbsqlite3': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
 }
 
 
