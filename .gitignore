@@ -9,8 +9,8 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-/env/
-
+env/
+env/.ptvs
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

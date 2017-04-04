@@ -14544,3 +14544,851 @@ System.FormatException: Input string was not in a correct format.
 2017-04-04T22:37:57: Saving group "e:\newlanghelperweb\newlanghelperweb\env\lib\site-packages\psycopg2"
 2017-04-04T22:37:58: End of group "e:\newlanghelperweb\newlanghelperweb\env\lib\site-packages\psycopg2"
 2017-04-04T22:37:59: Deleting 0 files
+
+2017-04-04T23:08:07: Start analysis
+2017-04-04T23:08:08: IncludeModulesFromModulePath = win32com
+2017-04-04T23:08:09: Deleting 0 files
+2017-04-04T23:08:09: Scraping numpy.core.multiarray
+2017-04-04T23:08:09: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.multiarray c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.multiarray
+2017-04-04T23:08:09: Scraping numpy.core.multiarray_tests
+2017-04-04T23:08:09: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.multiarray_tests c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.multiarray_tests
+2017-04-04T23:08:10: Scraping numpy.core.operand_flag_tests
+2017-04-04T23:08:10: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.operand_flag_tests c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.operand_flag_tests
+2017-04-04T23:08:10: Scraping numpy.core.struct_ufunc_test
+2017-04-04T23:08:10: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.struct_ufunc_test c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.struct_ufunc_test
+2017-04-04T23:08:10: Scraping numpy.core.test_rational
+2017-04-04T23:08:10: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.test_rational c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.test_rational
+2017-04-04T23:08:10: Scraping numpy.core.umath
+2017-04-04T23:08:10: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.umath c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.umath
+2017-04-04T23:08:10: Scraping numpy.core.umath_tests
+2017-04-04T23:08:10: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core.umath_tests c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core.umath_tests
+2017-04-04T23:08:11: Scraping numpy.core._dummy
+2017-04-04T23:08:11: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.core._dummy c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.core._dummy
+2017-04-04T23:08:11: Scraping numpy.fft.fftpack_lite
+2017-04-04T23:08:11: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.fft.fftpack_lite c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.fft.fftpack_lite
+2017-04-04T23:08:11: Scraping numpy.linalg.lapack_lite
+2017-04-04T23:08:11: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.linalg.lapack_lite c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.linalg.lapack_lite
+2017-04-04T23:08:11: Scraping numpy.linalg._umath_linalg
+2017-04-04T23:08:11: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.linalg._umath_linalg c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.linalg._umath_linalg
+2017-04-04T23:08:12: Scraping numpy.random.mtrand
+2017-04-04T23:08:12: Command: C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\Scripts\python.exe E:\VScommunity\Common7\IDE\Extensions\Microsoft\Python\Core\ExtensionScraper.py scrape numpy.random.mtrand c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages C:\Users\Rastsislau\Source\Repos\NewLangHelperWeb\NewLangHelperWeb\env\.ptvs\numpy\numpy.random.mtrand
+2017-04-04T23:08:12: Scraped 12 files
+2017-04-04T23:08:12: astropy.CallDepth = 0
+2017-04-04T23:08:12: delphixpy.CallDepth = 0
+2017-04-04T23:08:12: matplotlib.CallDepth = 3
+2017-04-04T23:08:12: pandas.CallDepth = 0
+2017-04-04T23:08:12: sympy.CallDepth = 0
+2017-04-04T23:08:12: Start group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy" with 193 files
+2017-04-04T23:08:12: Parsing "numpy.add_newdocs" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\add_newdocs.py")
+2017-04-04T23:08:12: Parsing "numpy.ctypeslib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ctypeslib.py")
+2017-04-04T23:08:12: Parsing "numpy.dual" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\dual.py")
+2017-04-04T23:08:12: Parsing "numpy.matlib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matlib.py")
+2017-04-04T23:08:12: Parsing "numpy.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.version" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\version.py")
+2017-04-04T23:08:12: Parsing "numpy._distributor_init" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\_distributor_init.py")
+2017-04-04T23:08:12: Parsing "numpy._globals" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\_globals.py")
+2017-04-04T23:08:12: Parsing "numpy._import_tools" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\_import_tools.py")
+2017-04-04T23:08:12: Parsing "numpy.__config__" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\__config__.py")
+2017-04-04T23:08:12: Parsing "numpy" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.compat.py3k" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\compat\py3k.py")
+2017-04-04T23:08:12: Parsing "numpy.compat.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\compat\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.compat._inspect" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\compat\_inspect.py")
+2017-04-04T23:08:12: Parsing "numpy.compat" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\compat\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.core.arrayprint" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\arrayprint.py")
+2017-04-04T23:08:12: Parsing "numpy.core.cversions" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\cversions.py")
+2017-04-04T23:08:12: Parsing "numpy.core.defchararray" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\defchararray.py")
+2017-04-04T23:08:12: Parsing "numpy.core.einsumfunc" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\einsumfunc.py")
+2017-04-04T23:08:12: Parsing "numpy.core.fromnumeric" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\fromnumeric.py")
+2017-04-04T23:08:12: Parsing "numpy.core.function_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\function_base.py")
+2017-04-04T23:08:12: Parsing "numpy.core.generate_numpy_api" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\generate_numpy_api.py")
+2017-04-04T23:08:12: Parsing "numpy.core.getlimits" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\getlimits.py")
+2017-04-04T23:08:12: Parsing "numpy.core.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\info.py")
+2017-04-04T23:08:12: Parsing "numpy.core.machar" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\machar.py")
+2017-04-04T23:08:12: Parsing "numpy.core.memmap" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\memmap.py")
+2017-04-04T23:08:12: Parsing "numpy.core.numeric" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\numeric.py")
+2017-04-04T23:08:12: Parsing "numpy.core.numerictypes" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\numerictypes.py")
+2017-04-04T23:08:12: Parsing "numpy.core.records" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\records.py")
+2017-04-04T23:08:12: Parsing "numpy.core.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.core.setup_common" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\setup_common.py")
+2017-04-04T23:08:12: Parsing "numpy.core.shape_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\shape_base.py")
+2017-04-04T23:08:12: Parsing "numpy.core._internal" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\_internal.py")
+2017-04-04T23:08:12: Parsing "numpy.core._methods" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\_methods.py")
+2017-04-04T23:08:12: Parsing "numpy.core" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.ccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\ccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.compat" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\compat.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.conv_template" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\conv_template.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.core" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\core.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.cpuinfo" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\cpuinfo.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.environment" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\environment.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.exec_command" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\exec_command.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.extension" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\extension.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.from_template" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\from_template.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\info.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.intelccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\intelccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.lib2def" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\lib2def.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.line_endings" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\line_endings.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.log" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\log.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.mingw32ccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\mingw32ccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.misc_util" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\misc_util.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.msvc9compiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\msvc9compiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.msvccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\msvccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.npy_pkg_config" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\npy_pkg_config.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.numpy_distribution" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\numpy_distribution.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.pathccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\pathccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.system_info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\system_info.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.unixccompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\unixccompiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.__config__" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\__config__.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.__version__" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\__version__.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.autodist" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\autodist.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.bdist_rpm" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\bdist_rpm.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build_clib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build_clib.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build_ext" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build_ext.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build_py" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build_py.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build_scripts" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build_scripts.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.build_src" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\build_src.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.config" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\config.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.config_compiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\config_compiler.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.develop" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\develop.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.egg_info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\egg_info.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.install" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\install.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.install_clib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\install_clib.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.install_data" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\install_data.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.install_headers" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\install_headers.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command.sdist" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\sdist.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.command" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\command\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.absoft" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\absoft.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.compaq" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\compaq.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.g95" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\g95.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.gnu" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\gnu.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.hpux" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\hpux.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.ibm" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\ibm.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.intel" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\intel.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.lahey" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\lahey.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.mips" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\mips.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.nag" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\nag.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.none" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\none.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.pathf95" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\pathf95.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.pg" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\pg.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.sun" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\sun.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler.vast" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\vast.py")
+2017-04-04T23:08:12: Parsing "numpy.distutils.fcompiler" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\fcompiler\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.basics" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\basics.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.broadcasting" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\broadcasting.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.byteswapping" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\byteswapping.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.constants" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\constants.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.creation" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\creation.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.glossary" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\glossary.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.indexing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\indexing.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.internals" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\internals.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.misc" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\misc.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.structured_arrays" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\structured_arrays.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.subclassing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\subclassing.py")
+2017-04-04T23:08:12: Parsing "numpy.doc.ufuncs" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\ufuncs.py")
+2017-04-04T23:08:12: Parsing "numpy.doc" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\doc\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.auxfuncs" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\auxfuncs.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.capi_maps" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\capi_maps.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.cb_rules" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\cb_rules.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.cfuncs" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\cfuncs.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.common_rules" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\common_rules.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.crackfortran" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\crackfortran.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.diagnose" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\diagnose.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.f2py2e" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\f2py2e.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.f2py_testing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\f2py_testing.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.f90mod_rules" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\f90mod_rules.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.func2subr" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\func2subr.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\info.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.rules" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\rules.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.use_rules" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\use_rules.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.__main__" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\__main__.py")
+2017-04-04T23:08:12: Parsing "numpy.f2py.__version__" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\__version__.py")
+2017-04-04T23:08:12: Parsing "numpy.fft.fftpack" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\fftpack.py")
+2017-04-04T23:08:12: Parsing "numpy.fft.helper" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\helper.py")
+2017-04-04T23:08:12: Parsing "numpy.fft.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\info.py")
+2017-04-04T23:08:12: Parsing "numpy.fft.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\setup.py")
+2017-04-04T23:08:12: Parsing "numpy.fft" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\__init__.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.arraypad" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\arraypad.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.arraysetops" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\arraysetops.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.arrayterator" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\arrayterator.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.financial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\financial.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.format" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\format.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.function_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\function_base.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.index_tricks" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\index_tricks.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\info.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.nanfunctions" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\nanfunctions.py")
+2017-04-04T23:08:12: Parsing "numpy.lib.npyio" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\npyio.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.polynomial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\polynomial.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.recfunctions" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\recfunctions.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.scimath" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\scimath.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.shape_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\shape_base.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.stride_tricks" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\stride_tricks.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.twodim_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\twodim_base.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.type_check" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\type_check.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.ufunclike" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\ufunclike.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.user_array" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\user_array.py")
+2017-04-04T23:08:13: Parsing "numpy.lib.utils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\utils.py")
+2017-04-04T23:08:13: Parsing "numpy.lib._datasource" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\_datasource.py")
+2017-04-04T23:08:13: Parsing "numpy.lib._iotools" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\_iotools.py")
+2017-04-04T23:08:13: Parsing "numpy.lib._version" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\_version.py")
+2017-04-04T23:08:13: Parsing "numpy.lib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.linalg.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\info.py")
+2017-04-04T23:08:13: Parsing "numpy.linalg.linalg" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\linalg.py")
+2017-04-04T23:08:13: Parsing "numpy.linalg.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.linalg" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.bench" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\bench.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.core" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\core.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.extras" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\extras.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.mrecords" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\mrecords.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.testutils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\testutils.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.timer_comparison" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\timer_comparison.py")
+2017-04-04T23:08:13: Parsing "numpy.ma.version" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\version.py")
+2017-04-04T23:08:13: Parsing "numpy.ma" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.matrixlib.defmatrix" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\defmatrix.py")
+2017-04-04T23:08:13: Parsing "numpy.matrixlib.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.matrixlib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.chebyshev" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\chebyshev.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.hermite" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\hermite.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.hermite_e" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\hermite_e.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.laguerre" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\laguerre.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.legendre" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\legendre.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.polynomial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\polynomial.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.polyutils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\polyutils.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial._polybase" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\_polybase.py")
+2017-04-04T23:08:13: Parsing "numpy.polynomial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.random.info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\random\info.py")
+2017-04-04T23:08:13: Parsing "numpy.random.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\random\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.random" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\random\__init__.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.decorators" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\decorators.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.noseclasses" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\noseclasses.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.nosetester" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\nosetester.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.print_coercion_tables" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\print_coercion_tables.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.setup" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\setup.py")
+2017-04-04T23:08:13: Parsing "numpy.testing.utils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\utils.py")
+2017-04-04T23:08:13: Parsing "numpy.testing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\__init__.py")
+2017-04-04T23:08:13: Parsing complete
+2017-04-04T23:08:13: Analyzing "numpy.add_newdocs"
+2017-04-04T23:08:13: Analyzing "numpy.ctypeslib"
+2017-04-04T23:08:13: Analyzing "numpy.dual"
+2017-04-04T23:08:13: Analyzing "numpy.matlib"
+2017-04-04T23:08:13: Analyzing "numpy.setup"
+2017-04-04T23:08:13: Analyzing "numpy.version"
+2017-04-04T23:08:13: Analyzing "numpy._distributor_init"
+2017-04-04T23:08:13: Analyzing "numpy._globals"
+2017-04-04T23:08:13: Analyzing "numpy._import_tools"
+2017-04-04T23:08:13: Analyzing "numpy.__config__"
+2017-04-04T23:08:13: Analyzing "numpy"
+2017-04-04T23:08:13: Analyzing "numpy.compat.py3k"
+2017-04-04T23:08:13: Analyzing "numpy.compat.setup"
+2017-04-04T23:08:13: Analyzing "numpy.compat._inspect"
+2017-04-04T23:08:13: Analyzing "numpy.compat"
+2017-04-04T23:08:13: Analyzing "numpy.core.arrayprint"
+2017-04-04T23:08:13: Analyzing "numpy.core.cversions"
+2017-04-04T23:08:13: Analyzing "numpy.core.defchararray"
+2017-04-04T23:08:13: Analyzing "numpy.core.einsumfunc"
+2017-04-04T23:08:13: Analyzing "numpy.core.fromnumeric"
+2017-04-04T23:08:13: Analyzing "numpy.core.function_base"
+2017-04-04T23:08:13: Analyzing "numpy.core.generate_numpy_api"
+2017-04-04T23:08:13: Analyzing "numpy.core.getlimits"
+2017-04-04T23:08:13: Analyzing "numpy.core.info"
+2017-04-04T23:08:13: Analyzing "numpy.core.machar"
+2017-04-04T23:08:13: Analyzing "numpy.core.memmap"
+2017-04-04T23:08:13: Analyzing "numpy.core.numeric"
+2017-04-04T23:08:13: Analyzing "numpy.core.numerictypes"
+2017-04-04T23:08:13: Analyzing "numpy.core.records"
+2017-04-04T23:08:13: Analyzing "numpy.core.setup"
+2017-04-04T23:08:13: Analyzing "numpy.core.setup_common"
+2017-04-04T23:08:13: Analyzing "numpy.core.shape_base"
+2017-04-04T23:08:13: Analyzing "numpy.core._internal"
+2017-04-04T23:08:13: Analyzing "numpy.core._methods"
+2017-04-04T23:08:13: Analyzing "numpy.core"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.ccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.compat"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.conv_template"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.core"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.cpuinfo"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.environment"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.exec_command"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.extension"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.from_template"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.info"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.intelccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.lib2def"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.line_endings"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.log"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.mingw32ccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.misc_util"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.msvc9compiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.msvccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.npy_pkg_config"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.numpy_distribution"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.pathccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.setup"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.system_info"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.unixccompiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.__config__"
+2017-04-04T23:08:13: Analyzing "numpy.distutils"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.__version__"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.autodist"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.bdist_rpm"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build_clib"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build_ext"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build_py"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build_scripts"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.build_src"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.config"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.config_compiler"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.develop"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.egg_info"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.install"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.install_clib"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.install_data"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.install_headers"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command.sdist"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.command"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.absoft"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.compaq"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.g95"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.gnu"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.hpux"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.ibm"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.intel"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.lahey"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.mips"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.nag"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.none"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.pathf95"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.pg"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.sun"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler.vast"
+2017-04-04T23:08:13: Analyzing "numpy.distutils.fcompiler"
+2017-04-04T23:08:13: Analyzing "numpy.doc.basics"
+2017-04-04T23:08:13: Analyzing "numpy.doc.broadcasting"
+2017-04-04T23:08:13: Analyzing "numpy.doc.byteswapping"
+2017-04-04T23:08:13: Analyzing "numpy.doc.constants"
+2017-04-04T23:08:13: Analyzing "numpy.doc.creation"
+2017-04-04T23:08:13: Analyzing "numpy.doc.glossary"
+2017-04-04T23:08:13: Analyzing "numpy.doc.indexing"
+2017-04-04T23:08:13: Analyzing "numpy.doc.internals"
+2017-04-04T23:08:13: Analyzing "numpy.doc.misc"
+2017-04-04T23:08:13: Analyzing "numpy.doc.structured_arrays"
+2017-04-04T23:08:13: Analyzing "numpy.doc.subclassing"
+2017-04-04T23:08:13: Analyzing "numpy.doc.ufuncs"
+2017-04-04T23:08:13: Analyzing "numpy.doc"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.auxfuncs"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.capi_maps"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.cb_rules"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.cfuncs"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.common_rules"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.crackfortran"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.diagnose"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.f2py2e"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.f2py_testing"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.f90mod_rules"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.func2subr"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.info"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.rules"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.setup"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.use_rules"
+2017-04-04T23:08:13: Analyzing "numpy.f2py"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.__main__"
+2017-04-04T23:08:13: Analyzing "numpy.f2py.__version__"
+2017-04-04T23:08:13: Analyzing "numpy.fft.fftpack"
+2017-04-04T23:08:13: Analyzing "numpy.fft.helper"
+2017-04-04T23:08:13: Analyzing "numpy.fft.info"
+2017-04-04T23:08:13: Analyzing "numpy.fft.setup"
+2017-04-04T23:08:13: Analyzing "numpy.fft"
+2017-04-04T23:08:13: Analyzing "numpy.lib.arraypad"
+2017-04-04T23:08:13: Analyzing "numpy.lib.arraysetops"
+2017-04-04T23:08:13: Analyzing "numpy.lib.arrayterator"
+2017-04-04T23:08:13: Analyzing "numpy.lib.financial"
+2017-04-04T23:08:13: Analyzing "numpy.lib.format"
+2017-04-04T23:08:13: Analyzing "numpy.lib.function_base"
+2017-04-04T23:08:13: Analyzing "numpy.lib.index_tricks"
+2017-04-04T23:08:13: Analyzing "numpy.lib.info"
+2017-04-04T23:08:13: Analyzing "numpy.lib.nanfunctions"
+2017-04-04T23:08:13: Analyzing "numpy.lib.npyio"
+2017-04-04T23:08:13: Analyzing "numpy.lib.polynomial"
+2017-04-04T23:08:13: Analyzing "numpy.lib.recfunctions"
+2017-04-04T23:08:13: Analyzing "numpy.lib.scimath"
+2017-04-04T23:08:13: Analyzing "numpy.lib.setup"
+2017-04-04T23:08:13: Analyzing "numpy.lib.shape_base"
+2017-04-04T23:08:13: Analyzing "numpy.lib.stride_tricks"
+2017-04-04T23:08:13: Analyzing "numpy.lib.twodim_base"
+2017-04-04T23:08:13: Analyzing "numpy.lib.type_check"
+2017-04-04T23:08:13: Analyzing "numpy.lib.ufunclike"
+2017-04-04T23:08:13: Analyzing "numpy.lib.user_array"
+2017-04-04T23:08:13: Analyzing "numpy.lib.utils"
+2017-04-04T23:08:13: Analyzing "numpy.lib._datasource"
+2017-04-04T23:08:13: Analyzing "numpy.lib._iotools"
+2017-04-04T23:08:13: Analyzing "numpy.lib._version"
+2017-04-04T23:08:13: Analyzing "numpy.lib"
+2017-04-04T23:08:13: Analyzing "numpy.linalg.info"
+2017-04-04T23:08:13: Analyzing "numpy.linalg.linalg"
+2017-04-04T23:08:13: Analyzing "numpy.linalg.setup"
+2017-04-04T23:08:13: Analyzing "numpy.linalg"
+2017-04-04T23:08:13: Analyzing "numpy.ma.bench"
+2017-04-04T23:08:13: Analyzing "numpy.ma.core"
+2017-04-04T23:08:13: Analyzing "numpy.ma.extras"
+2017-04-04T23:08:13: Analyzing "numpy.ma.mrecords"
+2017-04-04T23:08:13: Analyzing "numpy.ma.setup"
+2017-04-04T23:08:13: Analyzing "numpy.ma.testutils"
+2017-04-04T23:08:13: Analyzing "numpy.ma.timer_comparison"
+2017-04-04T23:08:13: Analyzing "numpy.ma.version"
+2017-04-04T23:08:13: Analyzing "numpy.ma"
+2017-04-04T23:08:13: Analyzing "numpy.matrixlib.defmatrix"
+2017-04-04T23:08:13: Analyzing "numpy.matrixlib.setup"
+2017-04-04T23:08:13: Analyzing "numpy.matrixlib"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.chebyshev"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.hermite"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.hermite_e"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.laguerre"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.legendre"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.polynomial"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.polyutils"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial.setup"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial._polybase"
+2017-04-04T23:08:13: Analyzing "numpy.polynomial"
+2017-04-04T23:08:13: Analyzing "numpy.random.info"
+2017-04-04T23:08:13: Analyzing "numpy.random.setup"
+2017-04-04T23:08:13: Analyzing "numpy.random"
+2017-04-04T23:08:13: Analyzing "numpy.testing.decorators"
+2017-04-04T23:08:13: Analyzing "numpy.testing.noseclasses"
+2017-04-04T23:08:13: Analyzing "numpy.testing.nosetester"
+2017-04-04T23:08:13: Analyzing "numpy.testing.print_coercion_tables"
+2017-04-04T23:08:13: Analyzing "numpy.testing.setup"
+2017-04-04T23:08:13: Analyzing "numpy.testing.utils"
+2017-04-04T23:08:13: Analyzing "numpy.testing"
+2017-04-04T23:08:13: Starting analysis of 193 modules
+2017-04-04T23:08:23: Analysis complete
+2017-04-04T23:08:23: Saving group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy"
+2017-04-04T23:08:26: [ERROR] numpy.f2py.crackfortran.dolowercase: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.f2py.crackfortran.readfortrancode: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.f2py.crackfortran.verbose: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.testing.nosetester.get_package_name: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.mingw32ccompiler.generate_def: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.mingw32ccompiler.generate_def: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.mingw32ccompiler.dump_table: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.mingw32ccompiler.find_dll: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.from_template.resolve_includes: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.from_template.process_file: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legfromroots: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legpow: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.poly2leg: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.legendre.legmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.timer_comparison.ModuleTester.ModuleTester: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.polyutils.trimseq: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.polyutils.trimseq: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.exec_command.get_pythonexe: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.exec_command.exec_command: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagfromroots: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.poly2lag: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagpow: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.laguerre.lagadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.line_endings.dos2unix: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.line_endings.dos2unix: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.line_endings.unix2dos: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.line_endings.unix2dos: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermefromroots: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermeadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermeadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermeadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermemulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermemulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.poly2herme: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermepow: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermemul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermemul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermemul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermesub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite_e.hermesub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.shape_base.atleast_1d: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.shape_base.atleast_2d: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler.gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler.gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler.gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler._distutils_gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler._distutils_gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.ccompiler._distutils_gen_lib_options: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib.npyio.loadtxt: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.getmask: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.get_fill_value: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.get_mask: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.MaskedArray.MaskedArray: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core._recursive_set_fill_value: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.fix_invalid: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.masked_array.MaskedArray: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ma.core.filled: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.fromnumeric.squeeze: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.fromnumeric.resize: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.fromnumeric._wrapit: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.fromnumeric.reshape: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.generate_numpy_api.do_generate_api: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.generate_numpy_api.do_generate_api: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.generate_numpy_api.do_generate_api: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.setup_common.check_api_version: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.setup_common.get_api_versions: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermsub: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermadd: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.poly2herm: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermpow: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermmul: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermfromroots: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.polynomial.hermite.hermmulx: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src.subst_vars: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src._find_swig_target: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src.get_f2py_modulename: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src.get_swig_target: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src.get_swig_modulename: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.command.build_src.build_src.build_src: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib.recfunctions.recursive_fill_fields: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib.recfunctions.merge_arrays: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib.recfunctions.append_fields: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.setup.pythonlib_dir: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.system_info.system_info.system_info: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.system_info.system_info.system_info: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.fcompiler.vast.VastFCompiler.VastFCompiler: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy._import_tools.PackageLoader.PackageLoader: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.ctypeslib.prep_simple: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.compat.py3k.npy_load_module: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.compat.py3k.npy_load_module: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.Repository.Repository: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource._open: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.open: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.lib._datasource.DataSource.DataSource: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.records.array: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.conv_template.resolve_includes: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.conv_template.process_file: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.core.numeric.asanyarray: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.f2py.auxfuncs.isfunction_wrap: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.quote_args: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.quote_args: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.is_string: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util._fix_paths: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.rel_path: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.appendpath: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.appendpath: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.InstallableLib.InstallableLib: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.InstallableLib.InstallableLib: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.is_sequence: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.get_mathlibs: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.minrelpath: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.minrelpath: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.njoin: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.Configuration.Configuration: Unknown has no name
+2017-04-04T23:08:26: [ERROR] numpy.distutils.misc_util.allpath: Unknown has no name
+2017-04-04T23:08:26: End of group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy"
+2017-04-04T23:08:26: Start group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy" with 113 files
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_abc" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_abc.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_api" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_api.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_arrayprint" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_arrayprint.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_datetime" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_datetime.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_defchararray" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_defchararray.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_deprecations" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_deprecations.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_dtype" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_dtype.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_einsum" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_einsum.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_errstate" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_errstate.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_extint128" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_extint128.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_function_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_function_base.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_getlimits" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_getlimits.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_half" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_half.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_indexerrors" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_indexerrors.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_indexing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_indexing.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_item_selection" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_item_selection.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_longdouble" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_longdouble.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_machar" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_machar.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_memmap" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_memmap.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_mem_overlap" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_mem_overlap.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_multiarray" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_multiarray.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_nditer" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_nditer.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_numeric" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_numeric.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_numerictypes" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_numerictypes.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_print" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_print.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_records" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_records.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_scalarinherit" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_scalarinherit.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_scalarmath" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_scalarmath.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_scalarprint" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_scalarprint.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_shape_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_shape_base.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_ufunc" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_ufunc.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_umath" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_umath.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_umath_complex" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_umath_complex.py")
+2017-04-04T23:08:26: Parsing "numpy.core.tests.test_unicode" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\core\tests\test_unicode.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_exec_command" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_exec_command.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_fcompiler_gnu" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_fcompiler_gnu.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_fcompiler_intel" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_fcompiler_intel.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_misc_util" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_misc_util.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_npy_pkg_config" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_npy_pkg_config.py")
+2017-04-04T23:08:26: Parsing "numpy.distutils.tests.test_system_info" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\distutils\tests\test_system_info.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_array_from_pyobj" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_array_from_pyobj.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_assumed_shape" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_assumed_shape.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_callback" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_callback.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_kind" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_kind.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_mixed" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_mixed.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_parameter" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_parameter.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_return_character" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_return_character.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_return_complex" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_return_complex.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_return_integer" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_return_integer.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_return_logical" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_return_logical.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_return_real" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_return_real.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.test_size" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\test_size.py")
+2017-04-04T23:08:26: Parsing "numpy.f2py.tests.util" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\f2py\tests\util.py")
+2017-04-04T23:08:26: Parsing "numpy.fft.tests.test_fftpack" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\tests\test_fftpack.py")
+2017-04-04T23:08:26: Parsing "numpy.fft.tests.test_helper" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\fft\tests\test_helper.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_arraypad" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_arraypad.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_arraysetops" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_arraysetops.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_arrayterator" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_arrayterator.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_financial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_financial.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_format" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_format.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_function_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_function_base.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_index_tricks" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_index_tricks.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_io" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_io.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_nanfunctions" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_nanfunctions.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_packbits" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_packbits.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_polynomial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_polynomial.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_recfunctions" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_recfunctions.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_shape_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_shape_base.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_stride_tricks" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_stride_tricks.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_twodim_base" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_twodim_base.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_type_check" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_type_check.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_ufunclike" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_ufunclike.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test_utils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test_utils.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test__datasource" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test__datasource.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test__iotools" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test__iotools.py")
+2017-04-04T23:08:26: Parsing "numpy.lib.tests.test__version" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\lib\tests\test__version.py")
+2017-04-04T23:08:26: Parsing "numpy.linalg.tests.test_build" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\tests\test_build.py")
+2017-04-04T23:08:26: Parsing "numpy.linalg.tests.test_deprecations" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\tests\test_deprecations.py")
+2017-04-04T23:08:26: Parsing "numpy.linalg.tests.test_linalg" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\tests\test_linalg.py")
+2017-04-04T23:08:26: Parsing "numpy.linalg.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\linalg\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_core" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_core.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_extras" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_extras.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_mrecords" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_mrecords.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_old_ma" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_old_ma.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.ma.tests.test_subclassing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\ma\tests\test_subclassing.py")
+2017-04-04T23:08:26: Parsing "numpy.matrixlib.tests.test_defmatrix" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\tests\test_defmatrix.py")
+2017-04-04T23:08:26: Parsing "numpy.matrixlib.tests.test_multiarray" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\tests\test_multiarray.py")
+2017-04-04T23:08:26: Parsing "numpy.matrixlib.tests.test_numeric" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\tests\test_numeric.py")
+2017-04-04T23:08:26: Parsing "numpy.matrixlib.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\matrixlib\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_chebyshev" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_chebyshev.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_classes" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_classes.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_hermite" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_hermite.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_hermite_e" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_hermite_e.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_laguerre" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_laguerre.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_legendre" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_legendre.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_polynomial" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_polynomial.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_polyutils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_polyutils.py")
+2017-04-04T23:08:26: Parsing "numpy.polynomial.tests.test_printing" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\polynomial\tests\test_printing.py")
+2017-04-04T23:08:26: Parsing "numpy.random.tests.test_random" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\random\tests\test_random.py")
+2017-04-04T23:08:26: Parsing "numpy.random.tests.test_regression" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\random\tests\test_regression.py")
+2017-04-04T23:08:26: Parsing "numpy.testing.tests.test_decorators" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\tests\test_decorators.py")
+2017-04-04T23:08:26: Parsing "numpy.testing.tests.test_doctesting" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\tests\test_doctesting.py")
+2017-04-04T23:08:26: Parsing "numpy.testing.tests.test_utils" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\testing\tests\test_utils.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_ctypeslib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_ctypeslib.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_matlib" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_matlib.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_numpy_version" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_numpy_version.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_reloading" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_reloading.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_scripts" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_scripts.py")
+2017-04-04T23:08:26: Parsing "numpy.tests.test_warnings" ("c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy\tests\test_warnings.py")
+2017-04-04T23:08:26: Parsing complete
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_abc"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_api"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_arrayprint"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_datetime"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_defchararray"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_deprecations"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_dtype"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_einsum"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_errstate"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_extint128"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_function_base"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_getlimits"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_half"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_indexerrors"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_indexing"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_item_selection"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_longdouble"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_machar"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_memmap"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_mem_overlap"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_multiarray"
+2017-04-04T23:08:26: Analyzing "numpy.core.tests.test_nditer"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_numeric"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_numerictypes"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_print"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_records"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_scalarinherit"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_scalarmath"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_scalarprint"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_shape_base"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_ufunc"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_umath"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_umath_complex"
+2017-04-04T23:08:27: Analyzing "numpy.core.tests.test_unicode"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_exec_command"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_fcompiler_gnu"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_fcompiler_intel"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_misc_util"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_npy_pkg_config"
+2017-04-04T23:08:27: Analyzing "numpy.distutils.tests.test_system_info"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_array_from_pyobj"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_assumed_shape"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_callback"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_kind"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_mixed"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_parameter"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_return_character"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_return_complex"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_return_integer"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_return_logical"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_return_real"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.test_size"
+2017-04-04T23:08:27: Analyzing "numpy.f2py.tests.util"
+2017-04-04T23:08:27: Analyzing "numpy.fft.tests.test_fftpack"
+2017-04-04T23:08:27: Analyzing "numpy.fft.tests.test_helper"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_arraypad"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_arraysetops"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_arrayterator"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_financial"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_format"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_function_base"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_index_tricks"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_io"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_nanfunctions"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_packbits"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_polynomial"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_recfunctions"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_shape_base"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_stride_tricks"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_twodim_base"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_type_check"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_ufunclike"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test_utils"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test__datasource"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test__iotools"
+2017-04-04T23:08:27: Analyzing "numpy.lib.tests.test__version"
+2017-04-04T23:08:27: Analyzing "numpy.linalg.tests.test_build"
+2017-04-04T23:08:27: Analyzing "numpy.linalg.tests.test_deprecations"
+2017-04-04T23:08:27: Analyzing "numpy.linalg.tests.test_linalg"
+2017-04-04T23:08:27: Analyzing "numpy.linalg.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_core"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_extras"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_mrecords"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_old_ma"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.ma.tests.test_subclassing"
+2017-04-04T23:08:27: Analyzing "numpy.matrixlib.tests.test_defmatrix"
+2017-04-04T23:08:27: Analyzing "numpy.matrixlib.tests.test_multiarray"
+2017-04-04T23:08:27: Analyzing "numpy.matrixlib.tests.test_numeric"
+2017-04-04T23:08:27: Analyzing "numpy.matrixlib.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_chebyshev"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_classes"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_hermite"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_hermite_e"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_laguerre"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_legendre"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_polynomial"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_polyutils"
+2017-04-04T23:08:27: Analyzing "numpy.polynomial.tests.test_printing"
+2017-04-04T23:08:27: Analyzing "numpy.random.tests.test_random"
+2017-04-04T23:08:27: Analyzing "numpy.random.tests.test_regression"
+2017-04-04T23:08:27: Analyzing "numpy.testing.tests.test_decorators"
+2017-04-04T23:08:27: Analyzing "numpy.testing.tests.test_doctesting"
+2017-04-04T23:08:27: Analyzing "numpy.testing.tests.test_utils"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_ctypeslib"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_matlib"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_numpy_version"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_reloading"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_scripts"
+2017-04-04T23:08:27: Analyzing "numpy.tests.test_warnings"
+2017-04-04T23:08:27: Starting analysis of 113 modules
+2017-04-04T23:08:29: Analysis complete
+2017-04-04T23:08:29: Saving group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy"
+2017-04-04T23:08:30: [ERROR] numpy.core.tests.test_indexing.TestMultiIndexingAutomated.TestMultiIndexingAutomated: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_mixed.TestMixed.TestMixed: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_mixed.TestMixed.TestMixed: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_mixed.TestMixed.TestMixed: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.distutils.tests.test_misc_util.ajoin: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_legendre.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.tests.test_scripts.run_command: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.tests.test_scripts.run_command: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.linalg.tests.test_linalg.LinalgCase.LinalgCase: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.linalg.tests.test_linalg.LinalgCase.LinalgCase: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_hermite.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_parameter.TestParameters.TestParameters: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_parameter.TestParameters.TestParameters: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_parameter.TestParameters.TestParameters: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_parameter.TestParameters.TestParameters: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_parameter.TestParameters.TestParameters: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_polynomial.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_hermite_e.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_assumed_shape.TestAssumedShapeSumExample.TestAssumedShapeSumExample: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_assumed_shape.TestAssumedShapeSumExample.TestAssumedShapeSumExample: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_assumed_shape.TestAssumedShapeSumExample.TestAssumedShapeSumExample: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.f2py.tests.test_assumed_shape.TestAssumedShapeSumExample.TestAssumedShapeSumExample: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.lib.tests.test__datasource.valid_textfile: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_chebyshev.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.polynomial.tests.test_laguerre.trim: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.distutils.tests.test_exec_command.redirect_stdout.redirect_stdout: Unknown has no name
+2017-04-04T23:08:30: [ERROR] numpy.distutils.tests.test_exec_command.redirect_stderr.redirect_stderr: Unknown has no name
+2017-04-04T23:08:30: End of group "c:\users\rastsislau\source\repos\newlanghelperweb\newlanghelperweb\env\lib\site-packages\numpy"
+2017-04-04T23:08:32: Deleting 0 files
