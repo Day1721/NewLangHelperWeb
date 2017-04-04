@@ -4,3 +4,4 @@ views
 middleware
 apps
 default_app_config
+tests
