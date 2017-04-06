@@ -1,5 +1,0 @@
-include
-admin
-django
-urlpatterns
-url

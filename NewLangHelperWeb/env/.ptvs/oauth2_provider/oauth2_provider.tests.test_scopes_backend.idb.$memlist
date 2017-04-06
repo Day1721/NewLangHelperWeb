@@ -1,5 +1,0 @@
-absolute_import
-SettingsScopes
-unicode_literals
-test_settings_scopes_get_available_scopes
-test_settings_scopes_get_default_scopes
