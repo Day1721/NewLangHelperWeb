@@ -32,6 +32,18 @@ urlpatterns = [
             }
         },
         name='login'),
+    url(r'^accounts/login/$',
+        django.contrib.auth.views.login,
+        {
+            'template_name': 'app/login.html',
+            'authentication_form': app.forms.BootstrapAuthenticationForm,
+            'extra_context':
+            {
+                'title': 'Log in',
+                'year': datetime.now().year,
+            }
+        },
+        name='login'),
     url(r'^logout$',
         django.contrib.auth.views.logout,
         {
@@ -41,7 +53,7 @@ urlpatterns = [
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 ]
