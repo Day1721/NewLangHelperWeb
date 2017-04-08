@@ -1,4 +1,0 @@
-authenticate
-patch_vary_headers
-MiddlewareMixin
-OAuth2TokenMiddleware
