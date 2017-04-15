@@ -12,10 +12,6 @@ class WordCard(models.Model):
     first_word = models.CharField(max_length=100)
     second_word = models.CharField(max_length=100)
 
-    #wstepnie to CharFieldy, potem można zrobić jakiś wybór z listy języków
-    first_language = models.CharField(max_length=100)
-    second_language = models.CharField(max_length=100)
-
 
 class CardGroup(models.Model):
     user = models.ForeignKey(User)
@@ -23,6 +19,10 @@ class CardGroup(models.Model):
 
     # każde słowo może należeć do wielu grup i każda grupa może mieć wiele słów
     words = models.ManyToManyField(WordCard, blank=True)
+
+    # wstepnie to CharFieldy, potem można zrobić jakiś wybór z listy języków
+    first_language = models.CharField(max_length=100, default='PL')
+    second_language = models.CharField(max_length=100, default='EN')
 
     class Meta:
         # kazdy uzytkownik moze miec jedna grupe o danej nazwie
