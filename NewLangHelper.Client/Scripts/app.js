@@ -2,13 +2,8 @@
 
 var serverUrl = 'TODO';
 
-var app = angular.module('langHelpApp', ['ngRoute']);
+var app = angular.module('langHelpApp', ['ngRoute', 'ngCookies']);
 
-app.controller('IndexController', ['$scope', function ($scope) {
-    $scope.AppTitle = 'New Lang Helper';
-
-    $scope.Login = '';
-}]);
 app.directive('loginDir', function () {
     return {
         templateUrl: 'Templates/LoginNavBarHelper.html'
@@ -17,6 +12,7 @@ app.directive('loginDir', function () {
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
     $locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true);
 
     $routeProvider
         .when('/', {

@@ -4,14 +4,26 @@
     <label for="login-username">Username:</label>
     <input type="text" id="login-username" ng-model="loginModel.username" required>
 
-    <label for="login-emailAddress">Email:</label>
-    <input type="text" id="login-emailAddress" ng-model="loginModel.emailAddress" required>
-
     <label for="login-password">Password:</label>
     <input type="password" id="login-password" ng-model="loginModel.password" required>
 
-    <label for="login-password2">Confirm password:</label>
-    <input type="password" id="login-password2" ng-model="loginModel.password2" required>
+    <input type="submit" value="Apply">
+</form>
+
+
+<form ng-submit="login()">
+    <label for="register-username">Username:</label>
+    <input type="text" id="register-username" ng-model="registerModel.username" required>
+
+    <label for="register-emailAddress">Email:</label>
+    <input type="text" id="register-emailAddress" ng-model="registerModel.emailAddress" required>
+
+    <label for="register-password">Password:</label>
+    <input type="password" id="register-password" ng-model="registerModel.password" required>
+
+    <label for="register-password2">Confirm password:</label>
+    <input type="password" id="register-password2" ng-model="registerModel.password2" required>
 
     <input type="submit" value="Apply">
 </form>
+

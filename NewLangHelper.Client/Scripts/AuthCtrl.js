@@ -1,7 +1,7 @@
 'use strict';
 
-app.controller('AuthController', ['$scope', '$http', function ($scope, $http) {
-    $scope.login = function () {
+app.controller('AuthController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
+    $scope.login = function() {
         $http.post(ServerUrl + '/login',
                 {
                     username: $scope.loginModel.username,
@@ -9,10 +9,28 @@ app.controller('AuthController', ['$scope', '$http', function ($scope, $http) {
                 })
             .then(function success(response) {
                     //TODO
+                    //maybe $cookies.put('token', response);
                 },
                 function error(response) {
                     //TODO
                 });
 
+    };
+
+    $scope.register = function () {
+        //TODO check if password == password2
+
+        $http.post(ServerUrl + '/register',
+                {
+                    username: $scope.registerModel.username,
+                    email: $scope.registerModel.email,
+                    password: $scope.registerModel.password
+                })
+            .then(function success(response) {
+                    //TODO
+                },
+                function error(response) {
+                    //TODO
+                });
     };
 }]);

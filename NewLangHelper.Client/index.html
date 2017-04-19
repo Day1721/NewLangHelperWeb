@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="Styles/bootstrap.min.css">
     <link rel="stylesheet" href="Styles/site.css">
 
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/Angular/angular.min.js"></script>
+    <script src="Scripts/Angular/angular-route.min.js"></script>
+    <script src="Scripts/Angular/angular-cookies.min.js"></script>
 
     <script src="Scripts/app.js"></script>
+    <script src="Scripts/IndexCtrl.js"></script>
 
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 
     <script src="Scripts/modernizr-2.6.2.js"></script>
+    
+    
+    <base href="/"/>
 </head>
 <body>
     <!-- default bootstrap navbar layout -->
@@ -32,8 +37,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li login-dir></li>
@@ -43,7 +48,7 @@
         </div>
     </div>
 
-    <div class="container body-content" id="bodyContent">
+    <div class="container body-content">
         <div ng-view></div>
     </div>
 
