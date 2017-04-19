@@ -1,5 +1,7 @@
 'use strict';
 
+var serverUrl = 'TODO';
+
 var app = angular.module('langHelpApp', ['ngRoute']);
 
 app.controller('IndexController', ['$scope', function ($scope) {
@@ -10,7 +12,7 @@ app.controller('IndexController', ['$scope', function ($scope) {
 app.directive('loginDir', function () {
     return {
         templateUrl: 'Templates/LoginNavBarHelper.html'
-    }
+    };
 });
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
