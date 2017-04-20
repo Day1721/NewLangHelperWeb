@@ -12,7 +12,10 @@ app.directive('loginDir', function () {
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
     $locationProvider.hashPrefix('');
-    $locationProvider.html5Mode(true);
+    /*$locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });*/
 
     $routeProvider
         .when('/', {
