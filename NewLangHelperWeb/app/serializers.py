@@ -11,3 +11,8 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ('url', 'name')
+
+
+class WordSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        fields = ('first_word', 'second_word')
