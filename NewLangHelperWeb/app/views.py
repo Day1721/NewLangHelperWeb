@@ -48,6 +48,7 @@ def about(request):
         }
     )
 from django.contrib.auth.models import User, Group
+from .models import *
 from rest_framework import viewsets
 from .serializers import *
 from django.views.decorators.http import require_POST, require_GET, require_http_methods
@@ -73,7 +74,7 @@ def card(request):
     user1 = request.user
     if (user1.is_authenticated):
         group1 = request.context["group_name"]
-        model_group = CardGroup.objects.filter(user = user1 ,  group = group1)
+        model_group = CardGroup.objects.filter(user = user1 ,  name = group1)
         for group_ in model_group :
             for word in group_word :
                 serializer = WordSerializer(word)
