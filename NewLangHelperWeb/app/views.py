@@ -48,6 +48,7 @@ def about(request):
         }
     )
 from django.contrib.auth.models import User, Group
+from .models import *
 from rest_framework import viewsets
 from .serializers import *
 from django.views.decorators.http import require_POST, require_GET, require_http_methods
@@ -79,4 +80,3 @@ def card(request):
             serializer = WordSerializer(word)
             return Response(serializer.data,status=201)
     return Response(status=status.HTTP_400_BAD_REQUEST)
-        
