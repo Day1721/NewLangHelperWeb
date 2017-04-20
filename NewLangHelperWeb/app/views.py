@@ -51,6 +51,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from .serializers import *
 from django.views.decorators.http import require_POST, require_GET, require_http_methods
+from .DBHandler.DBHandler import get_words_from_user_group
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -71,12 +72,11 @@ class GroupViewSet(viewsets.ModelViewSet):
 @require_GET
 def card(request):
     user1 = request.user
-    if (user1.is_authenticated):
+    if user1.is_authenticated:
         group1 = request.context["group_name"]
-        model_group = CardGroup.objects.filter(user = user1 ,  group = group1)
-        for group_ in model_group :
-            for word in group_word :
-                serializer = WordSerializer(word)
-                return Response(serializer.data,status=201)
+        group_words = get_words_from_user_group(user1, group1)
+        for word in group_words:
+            serializer = WordSerializer(word)
+            return Response(serializer.data,status=201)
     return Response(status=status.HTTP_400_BAD_REQUEST)
         

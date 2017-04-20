@@ -10,6 +10,10 @@ def get_groups_from_user(user):
 def get_words_from_group(group):
     return list(group.words.all())
 
+
+def get_words_from_user_group(user, group_name):
+    group = [i for i in get_groups_from_user(user) if i.name == group_name]
+    return get_words_from_group(group)
 # CREATE
 
 
