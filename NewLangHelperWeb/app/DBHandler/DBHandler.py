@@ -4,16 +4,20 @@ from ..models import CardGroup, WordCard
 # READ
 
 def get_groups_from_user(user):
-    return list(CardGroup.objects.all().filter(user=user))
+    return CardGroup.objects.all().filter(user=user)
 
 
 def get_words_from_group(group):
-    return list(group.words.all())
+    return group.words.all()
 
 
 def get_words_from_user_group(user, group_name):
     group = [i for i in get_groups_from_user(user) if i.name == group_name]
     return get_words_from_group(group)
+
+
+def get_group_from_id(id):
+    return CardGroup.objects.all().get(id=id)
 # CREATE
 
 
