@@ -2,17 +2,19 @@
 
 app.controller('AuthController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
     $scope.login = function() {
-        $http.post(ServerUrl + '/login',
+        $http.post(serverUrl + '/rest-auth/login/ ',
                 {
                     username: $scope.loginModel.username,
-                    password: $scope.loginModel.password
+                    password: $scope.loginModel.password,
+                    email : $scope.loginModel.email
                 })
             .then(function success(response) {
-                    //TODO
+                    console.log(response)
                     //maybe $cookies.put('token', response);
                 },
                 function error(response) {
-                    //TODO
+                    console.log(response)
+                    alert(response)
                 });
 
     };
@@ -20,17 +22,20 @@ app.controller('AuthController', ['$scope', '$http', '$cookies', function ($scop
     $scope.register = function () {
         //TODO check if password == password2
 
-        $http.post(ServerUrl + '/register',
+        $http.post(serverUrl + '/rest-auth/registration/ ',
                 {
                     username: $scope.registerModel.username,
                     email: $scope.registerModel.email,
-                    password: $scope.registerModel.password
+                    password1: $scope.registerModel.password,
+                    password2 : $scope.registerModel.password2
+
                 })
             .then(function success(response) {
-                    //TODO
+                    console.log(response)
                 },
                 function error(response) {
-                    //TODO
+                    console.log(response)
+                    alert(response)
                 });
     };
 }]);

@@ -1,6 +1,6 @@
 'use strict';
 
-var serverUrl = 'TODO';
+var serverUrl = "http://localhost:8001";
 
 var app = angular.module('langHelpApp', ['ngRoute', 'ngCookies']);
 
