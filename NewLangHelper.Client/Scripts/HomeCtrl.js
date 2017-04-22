@@ -14,4 +14,4 @@ app.controller('HomeController', ['$scope', '$http', '$cookies', function($scope
     function error(response) {
         console.log(response);
     });
-}])
+}]);

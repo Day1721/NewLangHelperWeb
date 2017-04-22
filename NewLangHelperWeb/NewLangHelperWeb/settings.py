@@ -64,6 +64,20 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_EXPOSE_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'authentication',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+
+)
+
 CORS_ORIGIN_WHITELIST = [
     'localhost:8000'
 ]

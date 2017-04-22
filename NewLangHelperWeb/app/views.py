@@ -59,7 +59,6 @@ from .serializers import *
 from django.views.decorators.http import require_POST, require_GET, require_http_methods
 from .DBHandler import DBHandler
 
-
 from django.http import HttpResponseRedirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -72,6 +71,7 @@ from rest_framework.renderers import AdminRenderer, TemplateHTMLRenderer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
+
 # Usage (need to be logged in)
 # localhostL/groups
 # GET - returns groups
@@ -79,13 +79,14 @@ from rest_framework.permissions import IsAuthenticated
 # {"name":name, "first_language":default, "second_language":default}
 class GroupList(APIView):
     permission_classes = [IsAuthenticated]
+
     def get(self, request, format=None):
-        print (request.user)
+        print(request.user)
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
         resp = Response(serializer.data, status=status.HTTP_200_OK)
         resp["Access-Control-Allow-Headers"] = "Authentication"
-        resp["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE"
+        resp["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS"
         resp["Access-Control-Allow-Origin"] = '*'
         return resp
 
@@ -96,6 +97,7 @@ class GroupList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 # Usage
 # localhost:/groups/id/
 # GET - Get a group details
@@ -103,6 +105,7 @@ class GroupList(APIView):
 # {'name':'name', 'first_language':'first', 'second_language':'second'}
 class GroupDetail(APIView):
     permission_classes = [IsAuthenticated]
+
     def get(self, request, pk, format=None):
         group = DBHandler.get_group_from_id(pk)
         words = DBHandler.get_words_from_group(group)
@@ -121,6 +124,7 @@ class GroupDetail(APIView):
         group = DBHandler.get_group_from_id(pk)
         group.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 # Usage
 # localhost:/groups/id/add_card
@@ -141,6 +145,7 @@ class AddCard(APIView):
         DBHandler.add_wordcard_to_group(word, group)
 
         return Response({}, status=status.HTTP_201_CREATED)
+
 
 # Usage
 # localhost:/groups/group_id/word/word_id
