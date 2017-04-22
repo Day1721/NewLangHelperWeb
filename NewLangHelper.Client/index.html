@@ -24,7 +24,7 @@
 </head>
 <body>
     <!-- default bootstrap navbar layout -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,9 +36,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
                     <li><a href="/#/about">About</a></li>
                     <li><a href="/#/contact">Contact</a></li>
+                    <!-- to do other options-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li login-dir></li>
@@ -46,7 +46,7 @@
 
             </div>
         </div>
-    </div>
+    </nav>
 
     <div class="container body-content">
         <div ng-view></div>
