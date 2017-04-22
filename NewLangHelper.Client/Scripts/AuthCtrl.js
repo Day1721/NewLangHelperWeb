@@ -6,7 +6,8 @@ app.controller('AuthController', ['$scope', '$http', '$cookies', function ($scop
                 {
                     username: $scope.loginModel.username,
                     password: $scope.loginModel.password,
-                    email : $scope.loginModel.email
+                    email: $scope.loginModel.email
+
                 })
             .then(function success(response) {
                     console.log(response)
