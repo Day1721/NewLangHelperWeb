@@ -83,7 +83,11 @@ class GroupList(APIView):
         print (request.user)
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        resp = Response(serializer.data, status=status.HTTP_200_OK)
+        resp["Access-Control-Allow-Headers"] = "Authentication"
+        resp["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE"
+        resp["Access-Control-Allow-Origin"] = '*'
+        return resp
 
     def post(self, request, format=None):
         serializer = GroupSerializer(data=request.data, context={'request': request})
