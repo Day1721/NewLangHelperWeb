@@ -16,8 +16,8 @@ class WordSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    words = serializers.HyperlinkedRelatedField(many=True, view_name='cardgroup-detail', read_only=True)
-    #words = WordSerializer(many=True)
+    #words = serializers.HyperlinkedRelatedField(many=True, view_name='cardgroup-detail', read_only=True)
+    words = WordSerializer(many=True)
     class Meta:
         model = CardGroup
         fields = ('url', 'name', 'first_language', 'second_language', 'words')

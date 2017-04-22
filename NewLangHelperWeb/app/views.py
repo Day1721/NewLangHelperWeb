@@ -113,16 +113,18 @@ class GroupDetail(APIView):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
+    def delete(self, request, pk):
+        group = DBHandler.get_group_from_id(pk)
+        group.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 # Usage
 # localhost:/groups/id/add_card
 # { 'first_word':'word', 'second_word':'word'} adds a word
-
 class AddCard(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk, format=None):
-        #group = DBHandler.get_group_from_id(pk)
-        #words = DBHandler.get_words_from_group(group)
         serializer = WordSerializer(context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -131,6 +133,34 @@ class AddCard(APIView):
         serializer = WordSerializer(data=request.data, context={'request': request})
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
-        serializer.save()
+        word = serializer.save()
+        DBHandler.add_wordcard_to_group(word, group)
+
         return Response({}, status=status.HTTP_201_CREATED)
 
+# Usage
+# localhost:/groups/group_id/word/word_id
+# POST : { 'first_word':'word', 'second_word':'word'} updates a word
+
+class CardDetail(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk, word_pk):
+        word = DBHandler.get_word_from_id(word_pk)
+        serializer = WordSerializer(word, context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request, pk, word_pk):
+        word = DBHandler.get_word_from_id(word_pk)
+        serializer = WordSerializer(word, data=request.data, context={'request': request})
+        if not serializer.is_valid():
+            return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+
+    def delete(self, request, pk, word_pk):
+        word = DBHandler.get_word_from_id(word_pk)
+        word.delete()
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+# Trzeba dodać potem IsOwner czy coś w tym stylu

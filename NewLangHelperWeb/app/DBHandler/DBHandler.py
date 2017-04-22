@@ -18,6 +18,10 @@ def get_words_from_user_group(user, group_name):
 
 def get_group_from_id(id):
     return CardGroup.objects.all().get(id=id)
+
+
+def get_word_from_id(id):
+    return WordCard.objects.all().get(id=id)
 # CREATE
 
 
