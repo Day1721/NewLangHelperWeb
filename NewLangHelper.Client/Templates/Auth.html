@@ -1,5 +1,4 @@
-<script src="/Scripts/AuthCtrl.js" ></script>
-<div id="forms">
+<div id="forms" ng-controller="IndexController">
 <div clas = "form_to_fill">
 
 <p>
@@ -10,28 +9,13 @@
 
 <form ng-submit="login()">
     <div class="container">
-        <p>
-    <label for="login-username">Username:</label>
-        </p><p>
-    <input type="text" id="login-username" ng-model="loginModel.username" required>
-</p>
-        <label for="login-emailAddress">Email:</label>
-    </p>
-    <p>
-        <input type="text" id="login-emailAddress" ng-model="loginModel.emailAddress" required>
-    </p>
-        <p>
-            <label for="login-password">Password:</label>
-        </p>
+        <p><label for="login-username">Username:</label></p>
+        <p><input type="text" id="login-username" ng-model="loginModel.username" required></p>
+        
+        <p><label for="login-password">Password:</label></p>
 
-        <p>
-        <p>
-    <input type="password" id="login-password" ng-model="loginModel.password" required>
-        </p>
-        <p>
-    <input class = "sub" type="submit" value="Apply">
-
-        </p>
+        <p><input type="password" id="login-password" ng-model="loginModel.password" required></p>
+        <p><input class = "sub" type="submit" value="Apply"></p>
     </div>
 </form>
 </div>
@@ -71,7 +55,6 @@
     <p>
     <input class = "sub" type="submit" value="Apply">
     </p>
-    </div>
 
 </form>
 

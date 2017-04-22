@@ -1,6 +1,6 @@
 'use strict';
 
-var serverUrl = "http://localhost:8001";
+var serverUrl = 'http://localhost:8001';
 
 var app = angular.module('langHelpApp', ['ngRoute', 'ngCookies']);
 
@@ -21,15 +21,19 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         .when('/', {
             templateUrl: 'Templates/Index.html'
         })
+        .when('/home', {
+            templateUrl: 'Templates/Home.html',
+            controller: 'HomeController'
+        })
         .when('/about', {
             templateUrl: 'Templates/About.html'
-        })/*
+        })
         .when('/contact', {
-            //TODO
-        })*/
+            templateUrl: 'Templates/Contact.html'
+        })
         .when('/auth', {
             templateUrl: 'Templates/Auth.html',
-            controller: 'AuthController'
+            controller: 'IndexController'
         })
         .otherwise({
             templateUrl: 'Templates/NotFound.html'

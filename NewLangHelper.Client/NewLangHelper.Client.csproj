@@ -84,9 +84,10 @@
     <Content Include="Scripts\Angular\angular.js" />
     <Content Include="Scripts\Angular\angular.min.js" />
     <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\AuthCtrl.js" />
+    <Content Include="Scripts\IndexCtrlAuth.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\HomeCtrl.js" />
     <Content Include="Scripts\IndexCtrl.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -97,6 +98,8 @@
     <Content Include="Styles\site.css" />
     <Content Include="Templates\About.html" />
     <Content Include="Templates\Auth.html" />
+    <Content Include="Templates\Contact.html" />
+    <Content Include="Templates\Home.html" />
     <Content Include="Templates\Index.html" />
     <Content Include="Templates\LoginNavBarHelper.html" />
     <Content Include="Templates\NotFound.html" />
