@@ -71,6 +71,7 @@ from rest_framework.reverse import reverse
 from rest_framework.renderers import AdminRenderer, TemplateHTMLRenderer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from .permissions import IsOwner
 
 # Usage (need to be logged in)
 # localhostL/groups
@@ -78,15 +79,14 @@ from rest_framework.permissions import IsAuthenticated
 # POST - creates a group
 # {"name":name, "first_language":default, "second_language":default}
 class GroupList(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsOwner]
     def get(self, request, format=None):
-        print (request.user)
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
         resp = Response(serializer.data, status=status.HTTP_200_OK)
         resp["Access-Control-Allow-Headers"] = "Authentication"
-        resp["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE"
-        resp["Access-Control-Allow-Origin"] = '*'
+        #resp["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE"
+        #resp["Access-Control-Allow-Origin"] = '*'
         return resp
 
     def post(self, request, format=None):
@@ -102,15 +102,17 @@ class GroupList(APIView):
 # POST - Change a group model
 # {'name':'name', 'first_language':'first', 'second_language':'second'}
 class GroupDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsOwner]
     def get(self, request, pk, format=None):
         group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         words = DBHandler.get_words_from_group(group)
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         serializer = GroupSerializer(group, data=request.data, context={'request': request})
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
@@ -119,6 +121,7 @@ class GroupDetail(APIView):
 
     def delete(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         group.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
@@ -129,11 +132,14 @@ class AddCard(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk, format=None):
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         serializer = WordSerializer(context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         serializer = WordSerializer(data=request.data, context={'request': request})
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
@@ -147,14 +153,18 @@ class AddCard(APIView):
 # POST : { 'first_word':'word', 'second_word':'word'} updates a word
 
 class CardDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsOwner]
 
     def get(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         word = DBHandler.get_word_from_id(word_pk)
         serializer = WordSerializer(word, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         word = DBHandler.get_word_from_id(word_pk)
         serializer = WordSerializer(word, data=request.data, context={'request': request})
         if not serializer.is_valid():
@@ -163,8 +173,8 @@ class CardDetail(APIView):
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
     def delete(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
         word = DBHandler.get_word_from_id(word_pk)
         word.delete()
         return Response({}, status=status.HTTP_204_NO_CONTENT)
-
-# Trzeba dodać potem IsOwner czy coś w tym stylu
