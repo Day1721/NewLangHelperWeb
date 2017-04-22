@@ -69,6 +69,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.renderers import AdminRenderer, TemplateHTMLRenderer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Usage (need to be logged in)
 # localhostL/groups
@@ -76,10 +78,9 @@ from rest_framework.renderers import AdminRenderer, TemplateHTMLRenderer
 # POST - creates a group
 # {"name":name, "first_language":default, "second_language":default}
 class GroupList(APIView):
-    #renderer_classes = (TemplateHTMLRenderer,)
-    #template_name = 'app/group_list.html'
-
+    permission_classes = [IsAuthenticated]
     def get(self, request, format=None):
+        print (request.user)
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -97,8 +98,7 @@ class GroupList(APIView):
 # POST - Change a group model
 # {'name':'name', 'first_language':'first', 'second_language':'second'}
 class GroupDetail(APIView):
-    #renderer_classes = (TemplateHTMLRenderer,)
-    #template_name = 'app/group_detail.html'
+    permission_classes = [IsAuthenticated]
     def get(self, request, pk, format=None):
         group = DBHandler.get_group_from_id(pk)
         words = DBHandler.get_words_from_group(group)
@@ -118,8 +118,7 @@ class GroupDetail(APIView):
 # { 'first_word':'word', 'second_word':'word'} adds a word
 
 class AddCard(APIView):
-    #renderer_classes = (TemplateHTMLRenderer,)
-    #template_name = 'app/add_card.html'
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, pk, format=None):
         #group = DBHandler.get_group_from_id(pk)
