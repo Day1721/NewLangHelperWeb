@@ -19,6 +19,27 @@ body {
     cursor: pointer;
 }
 
+table, th, td {
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(6, 248, 33, 0.17)
+}
+
+tr:hover {
+    background-color: rgba(10, 200, 14, 0.51)
+}
+
 #forms {
     padding-top: 30px;
     margin-top : 30px;

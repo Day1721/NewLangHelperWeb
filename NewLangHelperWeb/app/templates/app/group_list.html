@@ -1,8 +1,13 @@
 <html><body>
 <h1>Groups</h1>
-<ul>
-    {% for group in groups %}
-    <li>{{ group.name }}</li>
-    {% endfor %}
-</ul>
+
+        <table>
+            {% for group in groups %}
+            <tr>
+                <td>
+                    {{ group.name }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
 </body></html>

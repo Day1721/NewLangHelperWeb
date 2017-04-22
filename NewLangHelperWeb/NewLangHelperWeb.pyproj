@@ -59,6 +59,9 @@
     <Folder Include="NewLangHelperWeb\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\add_card.html" />
+    <Content Include="app\templates\app\group_detail.html" />
+    <Content Include="app\templates\app\group_list.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
