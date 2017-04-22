@@ -68,15 +68,18 @@ from rest_framework import generics, permissions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from rest_framework import renderers
+from rest_framework.renderers import AdminRenderer, TemplateHTMLRenderer
 
 
 class GroupList(APIView):
+    renderer_classes = (TemplateHTMLRenderer,)
+    template_name = 'app/group_list.html'
+
     def get(self, request, format=None):
         print("here2")
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
-        return Response(serializer.data)
+        return Response({'groups':groups})
 
     def post(self, request, format=None):
         serializer = GroupSerializer(data=request.data, context={'request': request})
@@ -87,19 +90,39 @@ class GroupList(APIView):
 
 
 class GroupDetail(APIView):
+    renderer_classes = (TemplateHTMLRenderer,)
+    template_name = 'app/group_detail.html'
     def get(self, request, pk, format=None):
+        print ('here')
         group = DBHandler.get_group_from_id(pk)
         words = DBHandler.get_words_from_group(group)
-        serializer = WordSerializer(words, many=True)
-        return Response(serializer.data)
+        serializer = GroupSerializer(group, context={'request': request})
+        return Response({'serializer':serializer, 'group':group})
 
-    def put(self, request, pk, format=None):
+    def post(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
-        serializer = GroupSerializer(group, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = GroupSerializer(group, data=request.data, context={'request': request})
+        if not serializer.is_valid():
+            return Response({'serializer': serializer, 'group':group})
+        serializer.save()
+        return Response({'serializer': serializer, 'group':group})
 
 
+class AddCard(APIView):
+    renderer_classes = (TemplateHTMLRenderer,)
+    template_name = 'app/add_card.html'
+
+    def get(self, request, pk, format=None):
+        #group = DBHandler.get_group_from_id(pk)
+        #words = DBHandler.get_words_from_group(group)
+        serializer = WordSerializer(context={'request': request})
+        return Response({'serializer':serializer, 'pk2':pk})
+
+    def post(self, request, pk):
+        group = DBHandler.get_group_from_id(pk)
+        serializer = WordSerializer(data=request.data, context={'request': request})
+        if not serializer.is_valid():
+            return Response({'serializer': serializer, 'pk2':pk})
+        serializer.save()
+        return Response({'serializer': WordSerializer(context={'request': request}), 'pk2':pk})
 
