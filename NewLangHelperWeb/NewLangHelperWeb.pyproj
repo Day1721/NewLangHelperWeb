@@ -5,6 +5,7 @@
     <Name>NewLangHelperWeb</Name>
     <RootNamespace>NewLangHelperWeb</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserPort>8001</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
