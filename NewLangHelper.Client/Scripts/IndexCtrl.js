@@ -1,11 +1,11 @@
 ﻿'use strict';
 
-app.controller('IndexController', ['$scope', '$http', '$cookies', '$window',
-    function ($scope, $http, $cookies, $window) {
+app.controller('IndexController', ['$scope', '$http', '$cookies',
+    function ($scope, $http, $cookies) {
         $scope.AppTitle = 'New Lang Helper';
     
         $scope.username = '';
         $scope.isLogged = false;
 
-        IndexAuth($scope, $http, $cookies, $window);
+        IndexAuth($scope, $http, $cookies);
     }]);

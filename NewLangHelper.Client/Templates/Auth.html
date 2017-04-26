@@ -1,11 +1,7 @@
 <div id="forms" ng-controller="IndexController">
-<div clas = "form_to_fill">
+<section>
 
-<p>
-<h2>Please log in</h2>
-</p>
-
-
+<p><h2>Please log in</h2></p>
 
 <form ng-submit="login()">
     <div class="container">
@@ -15,49 +11,32 @@
         <p><label for="login-password">Password:</label></p>
 
         <p><input type="password" id="login-password" ng-model="loginModel.password" required></p>
-        <p><input class = "sub" type="submit" value="Apply"></p>
+        <p><input class="sub" type="submit" value="Apply"></p>
     </div>
 </form>
-</div>
-<div class = "form_to_fill">
+</section>
+<section>
 
-
-<p>
-    <h2> Or register</h2>
-</p>
+<p><h2> Or register</h2></p>
 
 
 <form ng-submit="register()">
     <div class = "container"></div>
-    <p>
-        <label for="register-username">Username:</label>
-    </p>
-    <p>
-    <input type="text" id="register-username" ng-model="registerModel.username" required>
-    </p>
-    <p>
-    <label for="register-emailAddress">Email:</label>
-    </p>
-    <p>
-        <input type="text" id="register-emailAddress" ng-model="registerModel.emailAddress" required>
-    </p>
-    <p>
-    <label for="register-password">Password:</label>
-</p>
-    <p>
-    <input type="password" id="register-password" ng-model="registerModel.password" required>
-</p>
-    <p>
-    <label for="register-password2">Confirm password:</label>
-    </p> <p>
-        <input type="password" id="register-password2" ng-model="registerModel.password2" required>
-    </p>
-    <p>
-    <input class = "sub" type="submit" value="Apply">
-    </p>
+    <p><label for="register-username">Username:</label></p>
+    <p><input type="text" id="register-username" ng-model="registerModel.username" required></p>
 
+    <p><label for="register-emailAddress">Email:</label></p>
+    <p><input type="text" id="register-emailAddress" ng-model="registerModel.emailAddress" required></p>
+
+    <p><label for="register-password">Password:</label></p>
+    <p><input type="password" id="register-password" ng-model="registerModel.password" required></p>
+
+    <p><label for="register-password2">Confirm password:</label></p> 
+    <p><input type="password" id="register-password2" ng-model="registerModel.password2" required></p>
+
+    <p><input class="sub" type="submit" value="Apply"></p>
 </form>
 
-</div>
+</section>
 </div>
 

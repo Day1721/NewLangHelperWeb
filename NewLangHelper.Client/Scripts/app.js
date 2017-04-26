@@ -1,6 +1,7 @@
 'use strict';
 
 var serverUrl = 'http://localhost:8001';
+var isLogged = false;
 
 var app = angular.module('langHelpApp', ['ngRoute', 'ngCookies']);
 
@@ -12,10 +13,6 @@ app.directive('loginDir', function () {
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
     $locationProvider.hashPrefix('');
-    /*$locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });*/
 
     $routeProvider
         .when('/', {
@@ -27,9 +24,6 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         })
         .when('/about', {
             templateUrl: 'Templates/About.html'
-        })
-        .when('/contact', {
-            templateUrl: 'Templates/Contact.html'
         })
         .when('/auth', {
             templateUrl: 'Templates/Auth.html',
