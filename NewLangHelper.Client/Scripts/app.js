@@ -1,35 +1,69 @@
-'use strict';
+﻿(function() {
+    'use strict';
 
-var serverUrl = 'http://localhost:8001';
-var isLogged = false;
+    var app = angular.module('app', ['ngRoute', 'ngCookies']);
 
-var app = angular.module('langHelpApp', ['ngRoute', 'ngCookies']);
+    app.config(configFunc);
+    app.run(runFunc);
+//    app.service('http', httpService);
 
-app.directive('loginDir', function () {
-    return {
-        templateUrl: 'Templates/LoginNavBarHelper.html'
-    };
-});
+    runFunc.$inject = ['$rootScope', '$cookies'];
 
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
-    $locationProvider.hashPrefix('');
+    function runFunc($rootScope, $cookies) {
+        $rootScope.serverUrl = 'http://localhost:8001';
+        $rootScope.jsonType = 'application/json';
 
-    $routeProvider
-        .when('/', {
-            templateUrl: 'Templates/Index.html'
-        })
-        .when('/home', {
-            templateUrl: 'Templates/Home.html',
-            controller: 'HomeController'
-        })
-        .when('/about', {
-            templateUrl: 'Templates/About.html'
-        })
-        .when('/auth', {
-            templateUrl: 'Templates/Auth.html',
-            controller: 'IndexController'
-        })
-        .otherwise({
-            templateUrl: 'Templates/NotFound.html'
+        $rootScope.username = $cookies.get('username');
+        $rootScope.isLogged = $rootScope.username != undefined; 
+    }
+    /*
+    function httpService() {
+        this
+    }*/
+
+    configFunc.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
+
+    function configFunc($routeProvider, $locationProvider, $httpProvider) {
+        $locationProvider.hashPrefix('');
+
+        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+        $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+        $httpProvider.defaults.withCredentials = true;
+        $httpProvider.interceptors.push(function ($cookies) {
+            return {
+                'request': function (config) {
+                    config.headers['X-CSRFToken'] = $cookies.get('csrftoken');
+                    return config;
+                }
+            };
         });
-}]);
+
+        $routeProvider
+            .when('/', {
+                templateUrl: 'Views/Index.html'
+            })
+            .when('/home', {
+                templateUrl: 'Views/Home.html',
+                controller: 'HomeCtrl'
+            })
+            .when('/contact', {
+                templateUrl: 'Views/Contact.html'
+            })
+            .when('/login', {
+                templateUrl: 'Views/Login.html',
+                controller: 'LoginCtrl'
+            })
+            .when('/register', {
+                templateUrl: 'Views/Register.html',
+                controller: 'RegisterCtrl'
+            })
+            .when('/logout', {
+                controller: 'LogoutCtrl'
+            })
+            .otherwise({
+                templateUrl: 'Views/NotFound.html'
+            });
+    }
+
+
+})();

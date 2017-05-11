@@ -1,61 +1,46 @@
 ﻿<!DOCTYPE html>
-<html lang="en" ng-app="langHelpApp" ng-controller="IndexController">
+<html ng-app="app">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ AppTitle }}</title>
+    <meta charset="utf-8" />
+    <title>New Lang Helper</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.js"></script>
 
-    <link rel="stylesheet" href="Styles/bootstrap.min.css">
-    <link rel="stylesheet" href="Styles/site.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link href="Content/Site.css" rel="stylesheet" />
 
-    <script src="Scripts/Angular/angular.min.js"></script>
-    <script src="Scripts/Angular/angular-route.min.js"></script>
-    <script src="Scripts/Angular/angular-cookies.min.js"></script>
-
-    <script src="Scripts/app.js"></script>
+    <script src="Scripts/App.js"></script>
     <script src="Scripts/IndexCtrl.js"></script>
-    <script src="Scripts/IndexCtrlAuth.js"></script>
     <script src="Scripts/HomeCtrl.js"></script>
-
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-
-    <script src="Scripts/modernizr-2.6.2.js"></script>
-    
-    <base href="/"/>
+    <script src="Scripts/LoginCtrl.js"></script>
+    <script src="Scripts/RegisterCtrl.js"></script>
 </head>
-<body>
-    <!-- default bootstrap navbar layout -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">{{ AppTitle }}</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/#/home">Home</a></li>
-                    <li><a href="/#/about">About</a></li>
-                    <!-- to do other options-->
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li login-dir></li>
-                </ul>
-
-            </div>
+<body ng-controller="IndexCtrl">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">New Lang Helper</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/#/home">Home</a></li>
+                <li><a href="/#/contact">Contact</a></li>
+            </ul>
+            <ng-include src="loginPath"></ng-include>
         </div>
     </div>
-
-    <div class="container">
-        <div ng-view></div>
-    </div>
-
-    <p>
-    <footer> &copy;NewLangHelper 2017 </footer>
-    </p>
-    <script src="Scripts/respond.js"></script>
+</div>
+    
+<div class="container body-content">
+    <ng-view></ng-view>
+</div>
 </body>
 </html>

@@ -52,16 +52,17 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
-    'app.middleware.corsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'app.middleware.corsMiddleware',
 ]
 
 CORS_EXPOSE_HEADERS = (
@@ -75,11 +76,10 @@ CORS_EXPOSE_HEADERS = (
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
-
 )
 
 CORS_ORIGIN_WHITELIST = [
-    'localhost:8000'
+    '*'
 ]
 
 REST_FRAMEWORK = {
@@ -169,3 +169,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_URLS_REGEX = r'^/(?:api|rest-auth)/.*$'

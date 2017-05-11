@@ -1,11 +1,15 @@
-﻿'use strict';
+﻿(function () {
+    'use strict';
 
-app.controller('IndexController', ['$scope', '$http', '$cookies',
-    function ($scope, $http, $cookies) {
-        $scope.AppTitle = 'New Lang Helper';
-    
-        $scope.username = '';
-        $scope.isLogged = false;
+    angular
+        .module('app')
+        .controller('IndexCtrl', indexCtrl);
 
-        IndexAuth($scope, $http, $cookies);
-    }]);
+    indexCtrl.$inject = ['$scope', '$rootScope'];
+
+    function indexCtrl($scope, $rootScope) {
+        $scope.title = 'IndexCtrl';
+
+        $scope.loginPath = 'Views/LoginPartial.html';
+    }
+})();

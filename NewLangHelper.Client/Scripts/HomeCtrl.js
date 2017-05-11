@@ -1,21 +1,28 @@
-﻿'use strict';
+﻿(function () {
+    'use strict';
 
-app.controller('HomeController', ['$scope', '$http', '$cookies',
-    function ($scope, $http, $cookies) {
-        var token = $cookies.get('token');
-        if (!token)
-            window.location.assign('/#/auth');
-        console.log(token);
+    angular
+        .module('app')
+        .controller('HomeCtrl', homeCtrl);
+
+    homeCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies'];
+
+    function homeCtrl($scope, $rootScope, $http, $location, $cookies) {
+        $scope.title = 'HomeCtrl';
+
+        const token = $cookies.get('token');
         $http({
             method: 'GET',
-            url: serverUrl + '/groups',
+            url: `${$rootScope.serverUrl}/groups/`, //maybe TODO
             headers: {
-                'Authentication': 'Token ' + token
+                Authorization: token
             }
-        }).then(function success(response) {
-            $scope.groups = response.data;
-        },
-        function error(response) {
-            window.location.assign('/#/auth');
-        });
-}]);
+        }).then(
+            function success(response) {
+
+            },
+            function error(response) {
+
+            });
+    }
+})();
