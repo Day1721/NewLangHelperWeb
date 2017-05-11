@@ -1,11 +1,22 @@
 ﻿<h3 id="temp">Home Page</h3>
+<div class="loader" ng-show="isLoading"></div>
 
 <ul ng-if="dataLength > 0">
     <li ng-repeat="(name, list) in data">
         {{name}}
         <ul>
             <li ng-repeat="group in list">
-                <a href="{{group.url}}">({{group.first_language}}|{{group.second_language}}){{group.name}}</a>
+                <button ng-click="showGroupInfo(group.id)"
+                        class="btn-link">
+                    {{group.name}}
+                </button>
+                <ul ng-show="wordListShow[group.id]">
+                    <li ng-show="partLoading[group.id]"><div class="loader"></div></li>
+
+                    <li ng-show="!partLoading[group.id]" ng-repeat="wordsPair in group.words">
+                        {{wordsPair.first_word}}&nbsp;-&nbsp;{{wordsPair.second_word}}
+                    </li>
+                </ul>
             </li>
         </ul>
     </li>

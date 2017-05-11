@@ -9,13 +9,15 @@
 
     function loginCtrl($scope, $rootScope, $http, $location, $cookies) {
         if ($cookies.get('token') !== '' && $rootScope.isLogged) {
-            //TRY to login twice
+            //TRY to go home, if redirect back, isLogged will be false
             $location.path('/home');
             $location.replace();
         }
 
         $rootScope.isLogged = false;
         $rootScope.username = '';
+        $cookies.remove('token');
+        $cookies.remove('username');
 
         $scope.title = 'LoginCtrl';
 
@@ -29,7 +31,6 @@
                 }
             }).then(
                 function success(response) {
-                    alert(`OK, token = ${response.data.key}`);
                     $rootScope.token = response.data.key;
                     $cookies.put('token', $rootScope.token);
                     $cookies.put('username', $scope.username); 
