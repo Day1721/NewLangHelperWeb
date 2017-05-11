@@ -10,6 +10,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from app.permissions import IsAuthenticatedOrOptions
+
 
 def home(request):
     """Renders the home page."""
@@ -78,7 +80,7 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 # POST - creates a group
 # {"name":name, "first_language":default, "second_language":default}
 class GroupList(APIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrOptions]
 
     def get(self, request, format=None):
         print(request.user)

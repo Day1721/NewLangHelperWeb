@@ -18,6 +18,7 @@
 
         $cookies.remove('token');
         $cookies.remove('username');
+        $cookies.remove('sessionid');
 
         $location.path('/');
         $location.replace();

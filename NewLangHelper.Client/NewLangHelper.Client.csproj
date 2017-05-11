@@ -300,6 +300,7 @@
     <Content Include="node_modules\angular-cookies\LICENSE.md" />
     <Content Include="node_modules\angular-cookies\package.json" />
     <Content Include="node_modules\angular-cookies\README.md" />
+    <Content Include="Readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
