@@ -22,7 +22,7 @@
         $scope.login = function() {
             $http({
                 method: 'POST',
-                url: $rootScope.serverUrl + '/rest-auth/login/',
+                url: `${$rootScope.serverUrl}/rest-auth/login/`,
                 data: {
                     'username': $scope.username,
                     'password': $scope.password
@@ -41,6 +41,7 @@
                 },
                 function error(response) {
                     alert(`ERROR, code = ${response.status}`);
+                    console.log(response.headers());
                 });
         };
     }

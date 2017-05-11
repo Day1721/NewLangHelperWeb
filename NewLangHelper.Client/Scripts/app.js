@@ -1,11 +1,11 @@
 ﻿(function() {
     'use strict';
 
-    var app = angular.module('app', ['ngRoute', 'ngCookies']);
+    const app = angular.module('app', ['ngRoute', 'ngCookies']);
 
     app.config(configFunc);
     app.run(runFunc);
-//    app.service('http', httpService);
+    app.service('http', httpService);
 
     runFunc.$inject = ['$rootScope', '$cookies'];
 
@@ -16,10 +16,10 @@
         $rootScope.username = $cookies.get('username');
         $rootScope.isLogged = $rootScope.username !== undefined; 
     }
-    /*
+    
     function httpService() {
-        this
-    }*/
+
+    }
 
     configFunc.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
 
@@ -40,14 +40,16 @@
 
         $routeProvider
             .when('/', {
-                templateUrl: 'Views/Index.html'
+                templateUrl: 'Views/Index.html',
+                controller: 'IndexCtrl'
             })
             .when('/home', {
                 templateUrl: 'Views/Home.html',
                 controller: 'HomeCtrl'
             })
             .when('/contact', {
-                templateUrl: 'Views/Contact.html'
+                templateUrl: 'Views/Contact.html',
+                controller: 'IndexCtrl'
             })
             .when('/login', {
                 templateUrl: 'Views/Login.html',
@@ -58,10 +60,12 @@
                 controller: 'RegisterCtrl'
             })
             .when('/logout', {
+                templateUrl: 'Views/Index.html',
                 controller: 'LogoutCtrl'
             })
             .otherwise({
-                templateUrl: 'Views/NotFound.html'
+                templateUrl: 'Views/NotFound.html',
+                controller: 'IndexCtrl'
             });
     }
 

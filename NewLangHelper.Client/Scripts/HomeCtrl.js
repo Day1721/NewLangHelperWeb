@@ -19,10 +19,22 @@
             }
         }).then(
             function success(response) {
+                function groupby(list) {
+                    return list.reduce((prev, elem) => {
+                        let fst = elem.first_language;
+                        let snd = elem.second_language;
+                        let key = `${fst}|${snd}`;
+                        (prev[key] = prev[key] || []).push(elem);
+                        return prev;
+                    }, {});
+                };
 
+                $scope.data = groupby(response.data);
+                $scope.dataLength = Object.keys($scope.data).length || 0;
             },
             function error(response) {
-
+                $location.path('/login');
+                $location.replace();
             });
     }
 })();

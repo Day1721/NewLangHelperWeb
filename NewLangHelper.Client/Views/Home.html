@@ -1,1 +1,14 @@
-﻿<h3>Home Page</h3>
+﻿<h3 id="temp">Home Page</h3>
+
+<ul ng-if="dataLength > 0">
+    <li ng-repeat="(name, list) in data">
+        {{name}}
+        <ul>
+            <li ng-repeat="group in list">
+                <a href="{{group.url}}">({{group.first_language}}|{{group.second_language}}){{group.name}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h3 ng-if="dataLength == 0">There is no groups</h3>

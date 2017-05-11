@@ -344,6 +344,7 @@
     <Content Include="Scripts\HomeCtrl.js" />
     <Content Include="Scripts\IndexCtrl.js" />
     <Content Include="Scripts\LoginCtrl.js" />
+    <Content Include="Scripts\LogoutCtrl.js" />
     <Content Include="Scripts\RegisterCtrl.js" />
     <Content Include="Views\Contact.html" />
     <Content Include="Views\Home.html" />
