@@ -14,7 +14,7 @@
         $rootScope.jsonType = 'application/json';
 
         $rootScope.username = $cookies.get('username');
-        $rootScope.isLogged = $rootScope.username != undefined; 
+        $rootScope.isLogged = $rootScope.username !== undefined; 
     }
     /*
     function httpService() {
