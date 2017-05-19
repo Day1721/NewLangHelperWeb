@@ -2,17 +2,17 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('layout')
         .controller('LoginCtrl', loginCtrl);
 
-    loginCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies'];
+    loginCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies', 'serverUrl'];
 
-    function loginCtrl($scope, $rootScope, $http, $location, $cookies) {
-        if ($cookies.get('token') !== '' && $rootScope.isLogged) {
+    function loginCtrl($scope, $rootScope, $http, $location, $cookies, serverUrl) {
+        /*if ($cookies.get('token') !== '' && $rootScope.isLogged) {
             //TRY to go home, if redirect back, isLogged will be false
             $location.path('/home');
             $location.replace();
-        }
+        }*/
 
         $rootScope.isLogged = false;
         $rootScope.username = '';
@@ -24,7 +24,7 @@
         $scope.login = function() {
             $http({
                 method: 'POST',
-                url: `${$rootScope.serverUrl}/rest-auth/login/`,
+                url: `${serverUrl}/rest-auth/login/`,
                 data: {
                     'username': $scope.username,
                     'password': $scope.password

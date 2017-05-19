@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
     <Content Include="node_modules\angular-cookies\angular-cookies.js" />
     <Content Include="node_modules\angular-cookies\angular-cookies.min.js" />
     <Content Include="node_modules\angular-cookies\index.js" />
@@ -342,11 +343,14 @@
     <Content Include="node_modules\bootstrap\js\tooltip.js" />
     <Content Include="node_modules\bootstrap\js\transition.js" />
     <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\HomeCtrl.js" />
-    <Content Include="Scripts\IndexCtrl.js" />
-    <Content Include="Scripts\LoginCtrl.js" />
-    <Content Include="Scripts\LogoutCtrl.js" />
-    <Content Include="Scripts\RegisterCtrl.js" />
+    <Content Include="Scripts\Config\Module.js" />
+    <Content Include="Scripts\Home\HomeCtrl.js" />
+    <Content Include="Scripts\Layout\IndexCtrl.js" />
+    <Content Include="Scripts\Layout\LoginCtrl.js" />
+    <Content Include="Scripts\Layout\LogoutCtrl.js" />
+    <Content Include="Scripts\Layout\Module.js" />
+    <Content Include="Scripts\Layout\RegisterCtrl.js" />
+    <Content Include="Scripts\Home\Module.js" />
     <Content Include="Views\Contact.html" />
     <Content Include="Views\Home.html" />
     <Content Include="Views\Index.html" />
@@ -359,7 +363,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\Controllers\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

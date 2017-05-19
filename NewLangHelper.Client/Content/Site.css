@@ -24,6 +24,11 @@ body {
     animation: spin 2s linear infinite;
 }
 
+.inline-btn-link {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);

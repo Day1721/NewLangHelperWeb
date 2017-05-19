@@ -1,6 +1,9 @@
 <h3 id="temp">Home Page</h3>
 <div class="loader" ng-show="isLoading"></div>
 
+<a ng-href="/#/new/group/">Add new group</a>
+<a ng-href="/#/new/word/">Add new word</a>
+
 <ul ng-if="dataLength > 0">
     <li ng-repeat="(name, list) in data">
         {{name}}
@@ -10,11 +13,16 @@
                         class="btn-link">
                     {{group.name}}
                 </button>
+                <button ng-click="deleteGroup(group.id)"
+                        class="btn-link">
+                    delete
+                </button>
                 <ul ng-show="wordListShow[group.id]">
                     <li ng-show="partLoading[group.id]"><div class="loader"></div></li>
 
                     <li ng-show="!partLoading[group.id]" ng-repeat="wordsPair in group.words">
-                        {{wordsPair.first_word}}&nbsp;-&nbsp;{{wordsPair.second_word}}
+                        {{wordsPair.first_word}}&nbsp;-&nbsp;{{wordsPair.second_word}}&nbsp;
+                        (<button class="btn-link inline-btn-link" ng-click="deleteWordPair(wordsPair.id)">delete</button>)
                     </li>
                 </ul>
             </li>

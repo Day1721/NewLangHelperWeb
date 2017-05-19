@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html ng-app="app">
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-strict-di>
 <head>
     <meta charset="utf-8" />
     <title>New Lang Helper</title>
@@ -11,13 +11,16 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
     <link href="Content/Site.css" rel="stylesheet" />
-
+    
+    <script src="Scripts/Config/Module.js"></script>
+    <script src="Scripts/Home/Module.js"></script>
+    <script src="Scripts/Home/HomeCtrl.js"></script>
+    <script src="Scripts/Layout/Module.js"></script>
+    <script src="Scripts/Layout/IndexCtrl.js"></script>
+    <script src="Scripts/Layout/LoginCtrl.js"></script>
+    <script src="Scripts/Layout/RegisterCtrl.js"></script>
+    <script src="Scripts/Layout/LogoutCtrl.js"></script>
     <script src="Scripts/App.js"></script>
-    <script src="Scripts/IndexCtrl.js"></script>
-    <script src="Scripts/HomeCtrl.js"></script>
-    <script src="Scripts/LoginCtrl.js"></script>
-    <script src="Scripts/RegisterCtrl.js"></script>
-    <script src="Scripts/LogoutCtrl.js"></script>
 </head>
 <body ng-controller="IndexCtrl">
 <div class="navbar navbar-inverse navbar-fixed-top">

@@ -1,26 +1,24 @@
 (function() {
     'use strict';
 
-    const app = angular.module('app', ['ngRoute', 'ngCookies']);
+    const dependencies = [
+        'ngRoute', 'ngCookies', // AngularJS modules
+        'home', 'layout'        // Custom modules
+    ];
 
-    app.config(configFunc);
+    const app = angular.module('app', dependencies);
+
+    //app.config(configFunc);
     app.run(runFunc);
-    app.service('http', httpService);
 
     runFunc.$inject = ['$rootScope', '$cookies'];
 
     function runFunc($rootScope, $cookies) {
-        $rootScope.serverUrl = 'http://localhost:8001';
-        $rootScope.jsonType = 'application/json';
-
         $rootScope.username = $cookies.get('username');
-        $rootScope.isLogged = $rootScope.username !== undefined; 
-    }
-    
-    function httpService() {
-
+        $rootScope.isLogged = $rootScope.username !== undefined;
     }
 
+    /*
     configFunc.$inject = ['$routeProvider', '$locationProvider', '$httpProvider'];
 
     function configFunc($routeProvider, $locationProvider, $httpProvider) {
@@ -43,10 +41,6 @@
                 templateUrl: 'Views/Index.html',
                 controller: 'IndexCtrl'
             })
-            .when('/home', {
-                templateUrl: 'Views/Home.html',
-                controller: 'HomeCtrl'
-            })
             .when('/contact', {
                 templateUrl: 'Views/Contact.html',
                 controller: 'IndexCtrl'
@@ -67,7 +61,7 @@
                 templateUrl: 'Views/NotFound.html',
                 controller: 'IndexCtrl'
             });
-    }
+    }*/
 
 
 })();

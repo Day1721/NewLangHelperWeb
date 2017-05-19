@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('layout')
         .controller('LogoutCtrl', logoutCtrl);
 
     logoutCtrl.$inject = ['$scope', '$rootScope', '$cookies', '$location'];
@@ -13,8 +13,7 @@
         console.log('HELLO');
 
         $rootScope.isLogged = false;
-        $rootScope.username = undefined;
-        $rootScope.token = undefined;
+        $rootScope.username = '';
 
         $cookies.remove('token');
         $cookies.remove('username');

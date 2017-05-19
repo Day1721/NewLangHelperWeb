@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('home')
         .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies'];
+    homeCtrl.$inject = ['$scope', '$http', '$location', 'serverUrl'];
 
-    function homeCtrl($scope, $rootScope, $http, $location, $cookies) {
+    function homeCtrl($scope, $http, $location, serverUrl) {
         $scope.title = 'HomeCtrl';
         $scope.partLoading = [];
         $scope.wordListShow = [];
@@ -16,13 +16,9 @@
             id => $scope.wordListShow[id] = !$scope.wordListShow[id];
 
         $scope.isLoading = true;
-        const token = $cookies.get('token');
         $http({
             method: 'GET',
-            url: `${$rootScope.serverUrl}/groups/`, //maybe TODO
-            headers: {
-                Authorization: token
-            }
+            url: `${serverUrl}/groups/`  //maybe TODO
         }).then(
             function success(response) {
                 response.data.map((elem) => {
@@ -30,15 +26,12 @@
                     $scope.partLoading[elem.id] = true;
                     $http({
                         method: 'GET',
-                        url: elem.url,
-                        headers: {
-                            Authorization: token
-                        }
+                        url: elem.url
                     }).then(
                         successResponse => {
                             elem.words = successResponse.data.words;
                             $scope.partLoading[elem.id] = false;
-                        }, logoutIf403);
+                        }, toLoginIf403);
                 }, []);
 
                 function groupby(list) {
@@ -55,11 +48,10 @@
                 $scope.dataLength = Object.keys($scope.data).length || 0;
 
                 $scope.isLoading = false;
-            }, logoutIf403);
+            }, toLoginIf403);
 
-        function logoutIf403(response) {
+        function toLoginIf403(response) {
             if (response.status === 403) {
-                $rootScope.isLogged = false;
                 $location.path('/login');
                 $location.replace();
             }

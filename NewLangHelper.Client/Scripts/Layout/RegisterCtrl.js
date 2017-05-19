@@ -2,19 +2,19 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('layout')
         .controller('RegisterCtrl', registerCtrl);
 
-    registerCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies'];
+    registerCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies', 'serverUrl'];
 
-    function registerCtrl($scope, $rootScope, $http, $location, $cookies) {
+    function registerCtrl($scope, $rootScope, $http, $location, $cookies, serverUrl) {
         $scope.title = 'RegisterCtrl';
         $scope.error = undefined;
 
         $scope.register = function () {
             $http({
                 method: 'POST',
-                url: $rootScope.serverUrl + '/rest-auth/registration/',
+                url: `${serverUrl}/rest-auth/registration/`,
                 data: {
                     'username': $scope.username,
                     'email': $scope.email,

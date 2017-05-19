@@ -8,7 +8,7 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 
 
 # Usage (need to be logged in)
-# localhostL/groups
+# /groups/
 # GET - returns groups
 # POST - creates a group
 # {"name":name, "first_language":default, "second_language":default}
@@ -33,14 +33,14 @@ class GroupList(APIView):
 
 
 # Usage
-# localhost:/groups/id/
+# /groups/{id}/
 # GET - Get a group details
 # POST - Change a group model
 # {'name':'name', 'first_language':'first', 'second_language':'second'}
 
 
 class GroupDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrOptions]
 
     def get(self, request, pk, format=None):
         group = DBHandler.get_group_from_id(pk)
@@ -63,7 +63,7 @@ class GroupDetail(APIView):
 
 
 # Usage
-# localhost:/groups/id/add_card
+# /groups/{id}/add-card
 # { 'first_word':'word', 'second_word':'word'} adds a word
 
 
@@ -86,7 +86,7 @@ class AddCard(APIView):
 
 
 # Usage
-# localhost:/groups/group_id/word/word_id
+# /groups/{group_id}/word/{word_id}
 # POST : { 'first_word':'word', 'second_word':'word'} updates a word
 
 
