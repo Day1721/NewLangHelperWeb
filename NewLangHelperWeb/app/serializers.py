@@ -12,7 +12,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class WordSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = WordCard
-        fields = ('firstWord', 'secondWord')
+        fields = ('pk', 'firstWord', 'secondWord')
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -20,5 +20,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = CardGroup
-        fields = ('url', 'name', 'firstLanguage', 'secondLanguage', 'words')
+        fields = ('pk', 'url', 'name', 'firstLanguage', 'secondLanguage', 'words')
 
