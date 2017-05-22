@@ -8,7 +8,11 @@
     homeCtrl.$inject = ['$scope', '$http', '$location', 'serverUrl'];
 
     function homeCtrl($scope, $http, $location, serverUrl) {
-        $scope.title = 'HomeCtrl';
+        if (!$scope.isLogged) {
+            $location.path('/login');
+        }
+	
+	$scope.title = 'HomeCtrl';
         $scope.partLoading = [];
         $scope.wordListShow = [];
 
