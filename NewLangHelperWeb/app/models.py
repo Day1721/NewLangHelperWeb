@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 
 
 class WordCard(models.Model):
-    firstWword = models.CharField(max_length=100)
+    firstWord = models.CharField(max_length=100)
     secondWord = models.CharField(max_length=100)
 
 
