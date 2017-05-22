@@ -48,7 +48,7 @@ class GroupDetail(APIView):
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def post(self, request, pk):
+    def patch(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
         serializer = GroupSerializer(group, data=request.data, context={'request': request})
         if not serializer.is_valid():
@@ -98,7 +98,7 @@ class CardDetail(APIView):
         serializer = WordSerializer(word, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def post(self, request, pk, word_pk):
+    def patch(self, request, pk, word_pk):
         word = DBHandler.get_word_from_id(word_pk)
         serializer = WordSerializer(word, data=request.data, context={'request': request})
         if not serializer.is_valid():
