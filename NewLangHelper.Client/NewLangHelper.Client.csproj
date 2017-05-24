@@ -70,6 +70,18 @@
     <Content Include="node_modules\angular-cookies\angular-cookies.js" />
     <Content Include="node_modules\angular-cookies\angular-cookies.min.js" />
     <Content Include="node_modules\angular-cookies\index.js" />
+    <Content Include="node_modules\angular-local-storage\.gitattributes" />
+    <Content Include="node_modules\angular-local-storage\demo\demo-app.js" />
+    <Content Include="node_modules\angular-local-storage\demo\demo-style.css" />
+    <Content Include="node_modules\angular-local-storage\demo\demo.html" />
+    <Content Include="node_modules\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="node_modules\angular-local-storage\dist\angular-local-storage.min.js" />
+    <Content Include="node_modules\angular-local-storage\Gruntfile.js" />
+    <Content Include="node_modules\angular-local-storage\index.js" />
+    <Content Include="node_modules\angular-local-storage\src\angular-local-storage.js" />
+    <Content Include="node_modules\angular-local-storage\test\karma.conf.js" />
+    <Content Include="node_modules\angular-local-storage\test\mock\localStorageMock.js" />
+    <Content Include="node_modules\angular-local-storage\test\spec\localStorageSpec.js" />
     <Content Include="node_modules\angular-route\angular-route.js" />
     <Content Include="node_modules\angular-route\angular-route.min.js" />
     <Content Include="node_modules\angular-route\index.js" />
@@ -302,6 +314,17 @@
     <Content Include="node_modules\angular-cookies\package.json" />
     <Content Include="node_modules\angular-cookies\README.md" />
     <Content Include="Readme.md" />
+    <Content Include="node_modules\angular-local-storage\.bowerrc" />
+    <Content Include="node_modules\angular-local-storage\.editorconfig" />
+    <Content Include="node_modules\angular-local-storage\.npmignore" />
+    <Content Include="node_modules\angular-local-storage\.travis.yml" />
+    <Content Include="node_modules\angular-local-storage\bower.json" />
+    <Content Include="node_modules\angular-local-storage\CHANGELOG.md" />
+    <Content Include="node_modules\angular-local-storage\dist\angular-local-storage.min.js.map" />
+    <Content Include="node_modules\angular-local-storage\LICENSE" />
+    <Content Include="node_modules\angular-local-storage\package.json" />
+    <Content Include="node_modules\angular-local-storage\README.md" />
+    <Content Include="node_modules\angular-local-storage\test\.jshintrc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,6 +367,8 @@
     <Content Include="node_modules\bootstrap\js\transition.js" />
     <Content Include="Scripts\App.js" />
     <Content Include="Scripts\Config\Module.js" />
+    <Content Include="Scripts\Home\AddGroupCtrl.js" />
+    <Content Include="Scripts\Home\AddWordCtrl.js" />
     <Content Include="Scripts\Home\HomeCtrl.js" />
     <Content Include="Scripts\Layout\IndexCtrl.js" />
     <Content Include="Scripts\Layout\LoginCtrl.js" />
@@ -351,21 +376,21 @@
     <Content Include="Scripts\Layout\Module.js" />
     <Content Include="Scripts\Layout\RegisterCtrl.js" />
     <Content Include="Scripts\Home\Module.js" />
-    <Content Include="Views\Contact.html" />
-    <Content Include="Views\Home.html" />
-    <Content Include="Views\Index.html" />
-    <Content Include="Views\Login.html" />
-    <Content Include="Views\LoginPartial.html" />
-    <Content Include="Views\NotFound.html" />
-    <Content Include="Views\Register.html" />
+    <Content Include="Views\Home\AddGroup.html" />
+    <Content Include="Views\Home\AddWord.html" />
+    <Content Include="Views\Home\Home.html" />
+    <Content Include="Views\Layout\Contact.html" />
+    <Content Include="Views\Layout\Index.html" />
+    <Content Include="Views\Layout\Login.html" />
+    <Content Include="Views\Layout\LoginPartial.html" />
+    <Content Include="Views\Layout\NotFound.html" />
+    <Content Include="Views\Layout\Register.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

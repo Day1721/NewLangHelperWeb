@@ -1,10 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    const app = angular.module('layout', [
-        'ngRoute', 'ngCookies',     // Angular modules 
-        'config'                    // Custom modules 
-    ]);
+    const app = angular.module('layout', ['config']);
 
     app.config(config);
 
@@ -13,7 +10,7 @@
     function config($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'Views/Index.html',
+                templateUrl: 'Views/Layout/Index.html',
                 controller: 'IndexCtrl'
             })
             .when('/contact', {
@@ -21,19 +18,19 @@
                 controller: 'IndexCtrl'
             })
             .when('/login', {
-                templateUrl: 'Views/Login.html',
+                templateUrl: 'Views/Layout/Login.html',
                 controller: 'LoginCtrl'
             })
             .when('/register', {
-                templateUrl: 'Views/Register.html',
+                templateUrl: 'Views/Layout/Register.html',
                 controller: 'RegisterCtrl'
             })
             .when('/logout', {
-                templateUrl: 'Views/Index.html',
+                templateUrl: 'Views/Layout/Index.html',
                 controller: 'LogoutCtrl'
             })
             .otherwise({
-                templateUrl: 'Views/NotFound.html',
+                templateUrl: 'Views/Layout/NotFound.html',
                 controller: 'IndexCtrl'
             });
     }
