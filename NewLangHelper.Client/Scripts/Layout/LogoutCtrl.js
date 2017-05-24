@@ -10,8 +10,6 @@
     function logoutCtrl($scope, $rootScope, $cookies, $location) {
         /*$scope.title = 'LogoutCtrl';*/
 
-        console.log('HELLO');
-
         $rootScope.isLogged = false;
         $rootScope.username = '';
 

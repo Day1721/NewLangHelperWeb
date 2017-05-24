@@ -4,4 +4,4 @@ from rest_framework.permissions import BasePermission
 class IsAuthenticatedOrOptions(BasePermission):
 
     def has_permission(self, request, view):
-        return request.method == 'OPTIONS' or request.user and request.user.is_authenticated()
+        return request.method == 'OPTIONS' or request.user and request.user.is_authenticated

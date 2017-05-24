@@ -1,14 +1,16 @@
 ﻿(function () {
     'use strict';
 
-    const app = angular.module('config', ['ngCookies']);
+    const app = angular.module('config', ['ngRoute', 'ngCookies', 'LocalStorageModule']);
 
     app.config(config);
     app.constant('serverUrl', 'http://localhost:8001');
 
-    config.$inject = ['$httpProvider', '$locationProvider'];
+    config.$inject = ['$httpProvider', '$locationProvider', 'localStorageServiceProvider'];
 
-    function config($httpProvider, $locationProvider) {
+    function config($httpProvider, $locationProvider, localStorageProvider) {
+        localStorageProvider.setPrefix('NLH');
+
         $locationProvider.hashPrefix('');
 
         $httpProvider.defaults.xsrfCookieName = 'csrftoken';

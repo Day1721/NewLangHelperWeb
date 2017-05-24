@@ -12,11 +12,12 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class WordSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = WordCard
-        fields = ('pk', 'firstWord', 'secondWord')
+        fields = ('firstWord', 'secondWord')
+        read_only_fields = ['pk']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    words = WordSerializer(many=True)
+    words = WordSerializer(many=True, read_only=True)
 
     class Meta:
         model = CardGroup

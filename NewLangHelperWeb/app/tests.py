@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -141,3 +142,24 @@ class GroupGetTests(APITestCase):
         self.assertEqual(response.data, [])
 
     #TODO get one group/more groups
+=======
+"""
+This file demonstrates writing tests using the unittest module. These will pass
+when you run "manage.py test".
+"""
+
+import django
+from django.test import TestCase
+
+# TODO: Configure your database in settings.py and sync before running tests.
+
+class ViewTest(TestCase):
+    """Tests for the application views."""
+
+    if django.VERSION[:2] >= (1, 7):
+        # Django 1.7 requires an explicit setup() when running tests in PTVS
+        @classmethod
+        def setUpClass(cls):
+            super(ViewTest, cls).setUpClass()
+            django.setup()
+>>>>>>> bf07793d56886014e68f26ec8741f65f46ad8ce7

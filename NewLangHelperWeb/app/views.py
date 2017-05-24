@@ -84,6 +84,8 @@ class AddCard(APIView):
 
         return Response({}, status=status.HTTP_201_CREATED)
 
+
+# 
 class AddCards(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
