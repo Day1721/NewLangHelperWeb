@@ -12,13 +12,13 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 # GET - returns groups
 # POST - creates a group
 # {"name":name, "first_language":default, "second_language":default}
+# words have to be empty right now, can change later on
 
 
 class GroupList(APIView):
     permission_classes = [IsAuthenticatedOrOptions]
 
     def get(self, request, format=None):
-        print(request.user)
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
         resp = Response(serializer.data, status=status.HTTP_200_OK)
@@ -35,7 +35,7 @@ class GroupList(APIView):
 # Usage
 # /groups/{id}/
 # GET - Get a group details
-# POST - Change a group model
+# PATCH - Change a group model
 # {'name':'name', 'first_language':'first', 'second_language':'second'}
 
 
@@ -64,7 +64,7 @@ class GroupDetail(APIView):
 
 # Usage
 # /groups/{id}/add-card
-# { 'first_word':'word', 'second_word':'word'} adds a word
+# POST { 'first_word':'word', 'second_word':'word'} adds a word
 
 
 class AddCard(APIView):
@@ -84,10 +84,28 @@ class AddCard(APIView):
 
         return Response({}, status=status.HTTP_201_CREATED)
 
+class AddCards(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get(self, request, pk, format=None):
+        serializer = WordSerializer(context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def post(self, request, pk):
+        group = DBHandler.get_group_from_id(pk)
+        for word in request.data:
+            serializer = WordSerializer(data=word, context={'request': request})
+            if not serializer.is_valid():
+                return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+            word = serializer.save()
+            DBHandler.add_wordcard_to_group(word, group)
+
+        return Response({}, status=status.HTTP_201_CREATED)
+
 
 # Usage
 # /groups/{group_id}/word/{word_id}
-# POST : { 'first_word':'word', 'second_word':'word'} updates a word
+# PATCH : { 'first_word':'word', 'second_word':'word'} updates a word
 
 
 class CardDetail(APIView):
