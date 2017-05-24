@@ -15,7 +15,7 @@
 
         $scope.data = {
             options: data
-        }
+        };
 
         $scope.dataLength = Object.keys($scope.data).length || 0;
 
