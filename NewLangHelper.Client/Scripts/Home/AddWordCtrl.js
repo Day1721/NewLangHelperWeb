@@ -28,7 +28,7 @@
         $scope.submit = function () {
             $http({
                 method: 'POST',
-                url: `${serverUrl}/groups/${$scope.data.selected.pk}/add-card/`,
+                url: `${serverUrl}/groups/${$scope.data.selected.pk}/add-cards/`,
                 data: $scope.words
             }).then(
                 successResponce => {
