@@ -92,12 +92,16 @@ class AddCards(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
+        words = []
         group = DBHandler.get_group_from_id(pk)
         for word in request.data:
             serializer = WordSerializer(data=word, context={'request': request})
             if not serializer.is_valid():
                 return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
             word = serializer.save()
+            words.append(word)
+
+        for word in words:
             DBHandler.add_wordcard_to_group(word, group)
 
         return Response({}, status=status.HTTP_201_CREATED)
