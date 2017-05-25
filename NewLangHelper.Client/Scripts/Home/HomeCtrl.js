@@ -5,9 +5,10 @@
         .module('home')
         .controller('HomeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$http', '$location', 'localStorageService', 'serverUrl'];
+    homeCtrl.$inject =
+        ['$scope', '$http', '$location', 'localStorageService', 'serverUrl', '$route'];
 
-    function homeCtrl($scope, $http, $location, localStorage, serverUrl) {
+    function homeCtrl($scope, $http, $location, localStorage, serverUrl, $route) {
         if (!$scope.isLogged) {
             $location.path('/login');
             return;
@@ -20,25 +21,48 @@
         $scope.showGroupInfo =
             id => $scope.wordListShow[id] = !$scope.wordListShow[id];
 
-        let data = localStorage.get('data') || [];
+        const data = localStorage.get('data') || [];
 
         $scope.data = groupby(data);
+        $scope.dataLength = Object.keys($scope.data).length || 0;
 
         $scope.isLoading = true;
 
+        $scope.deleteGroup = id => {
+            $http({
+                method: 'DELETE',
+                url: `${serverUrl}/groups/${id}/`
+            }).then(
+                successResponce => {
+                    alert('Group deleted successfully.');
+                    $route.reload();
+                }, console.log);
+        };
+
+        $scope.deleteCard = (groupId, id) => {
+            $http({
+                method: 'DELETE',
+                url: `${serverUrl}/groups/${groupId}/word/${id}/`
+            }).then(
+                sucessResponce => {
+                    alert('Card deleted successfully.');
+                    $route.reload();
+                },
+                console.log);
+        };
 
         $http({
             method: 'GET',
             url: `${serverUrl}/groups/`  //maybe TODO
         }).then(
-            function success(response) {
-                response.data.forEach(elem => {
+            successResponce => {
+                successResponce.data.forEach(elem => {
                     elem.id = elem.pk;
                 });
 
-                localStorage.set('data', response.data);
+                localStorage.set('data', successResponce.data);
 
-                $scope.data = groupby(response.data);
+                $scope.data = groupby(successResponce.data);
                 $scope.dataLength = Object.keys($scope.data).length || 0;
 
                 $scope.isLoading = false;

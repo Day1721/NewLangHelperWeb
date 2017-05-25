@@ -12,8 +12,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class WordSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = WordCard
-        fields = ('firstWord', 'secondWord')
-        read_only_fields = ['pk']
+        fields = ('pk', 'firstWord', 'secondWord')
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):

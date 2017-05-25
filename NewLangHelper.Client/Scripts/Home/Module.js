@@ -13,7 +13,7 @@
                 templateUrl: 'Views/Home/Home.html',
                 controller: 'HomeCtrl'
             })
-            .when('/add/word/', {
+            .when('/add/card/', {
                 templateUrl: 'Views/Home/AddWord.html',
                 controller: 'AddWordCtrl'
             })

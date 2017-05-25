@@ -2,7 +2,7 @@
 <div class="loader" ng-show="isLoading"></div>
 
 <a ng-href="/#/add/group/">Add new group</a>
-<a ng-href="/#/add/word/">Add new word</a>
+<a ng-href="/#/add/card/">Add new card</a>
 
 <ul ng-if="dataLength > 0">
     <li ng-repeat="(name, list) in data">
@@ -20,9 +20,9 @@
                 <ul ng-show="wordListShow[group.id]">
                     <li ng-show="partLoading[group.id]"><div class="loader"></div></li>
 
-                    <li ng-show="!partLoading[group.id]" ng-repeat="wordsPair in group.words">
-                        {{wordsPair.firstWord}}&nbsp;-&nbsp;{{wordsPair.secondWord}}&nbsp;
-                        (<button class="btn-link inline-btn-link" ng-click="deleteWordPair(wordsPair.id)">delete</button>)
+                    <li ng-show="!partLoading[group.id]" ng-repeat="card in group.words">
+                        {{card.firstWord}}&nbsp;-&nbsp;{{card.secondWord}}&nbsp;
+                        (<button class="btn-link inline-btn-link" ng-click="deleteCard(group.id, card.pk)">delete</button>)
                     </li>
                 </ul>
             </li>

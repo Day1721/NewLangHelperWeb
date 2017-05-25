@@ -14,7 +14,7 @@
                 controller: 'IndexCtrl'
             })
             .when('/contact', {
-                templateUrl: 'Views/Contact.html',
+                templateUrl: 'Views/Layout/Contact.html',
                 controller: 'IndexCtrl'
             })
             .when('/login', {
