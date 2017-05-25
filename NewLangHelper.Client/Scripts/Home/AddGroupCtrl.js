@@ -26,6 +26,7 @@
                 }
             }).then(
                 successResponce => {
+                    console.log(successResponce);
                     $location.path('/home');
                 },
                 errorResponce => {
