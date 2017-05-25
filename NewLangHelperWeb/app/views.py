@@ -44,12 +44,16 @@ class GroupDetail(APIView):
 
     def get(self, request, pk, format=None):
         group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error':'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         words = DBHandler.get_words_from_group(group)
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def patch(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error':'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = GroupSerializer(group, data=request.data, context={'request': request})
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
@@ -58,6 +62,8 @@ class GroupDetail(APIView):
 
     def delete(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error':'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         group.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
@@ -71,11 +77,16 @@ class AddCard(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, pk, format=None):
+        group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = WordSerializer(context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
         group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error':'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = WordSerializer(data=request.data, context={'request': request})
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
@@ -90,12 +101,17 @@ class AddCards(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, pk, format=None):
+        group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = WordSerializer(context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
         words = []
         group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         for word in request.data:
             serializer = WordSerializer(data=word, context={'request': request})
             if not serializer.is_valid():
@@ -118,11 +134,17 @@ class CardDetail(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         word = DBHandler.get_word_from_id(word_pk)
         serializer = WordSerializer(word, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def patch(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         word = DBHandler.get_word_from_id(word_pk)
         serializer = WordSerializer(word, data=request.data, context={'request': request})
         if not serializer.is_valid():
@@ -131,6 +153,9 @@ class CardDetail(APIView):
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
     def delete(self, request, pk, word_pk):
+        group = DBHandler.get_group_from_id(pk)
+        if group.user != request.user:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         word = DBHandler.get_word_from_id(word_pk)
         word.delete()
         return Response({}, status=status.HTTP_204_NO_CONTENT)
