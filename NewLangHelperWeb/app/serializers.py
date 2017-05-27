@@ -20,5 +20,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = CardGroup
-        fields = ('pk', 'url', 'name', 'firstLanguage', 'secondLanguage', 'words')
+        fields = ('pk', 'url', 'name', 'firstLanguage', 'secondLanguage', 'words', 'hash')
 

@@ -20,9 +20,13 @@ class CardGroup(models.Model):
     # każde słowo może należeć do wielu grup i każda grupa może mieć wiele słów
     words = models.ManyToManyField(WordCard, blank=True)
 
+    users = models.ManyToManyField(User, related_name='users_with_access')
+
     # wstepnie to CharFieldy, potem można zrobić jakiś wybór z listy języków
     firstLanguage = models.CharField(max_length=100, default='PL')
     secondLanguage = models.CharField(max_length=100, default='EN')
+
+    hash = models.CharField(max_length=50, blank=True)
 
     class Meta:
         # kazdy uzytkownik moze miec jedna grupe o danej nazwie
