@@ -57,12 +57,12 @@ namespace NewLangGeneration
 
                 try
                 {
-                    if (Directory.Exists("E:\\data_to_parse"))
+                    if (Directory.Exists("..\\..\\..\\data_to_parse"))
                     {
-                        Directory.Delete("E:\\data_to_parse",true);
+                        Directory.Delete("..\\..\\..\\data_to_parse",true);
                     }
-                    ZipFile.ExtractToDirectory(fileName, "E:\\data_to_parse");
-                    string parsePath = "E:\\data_to_parse";
+                    ZipFile.ExtractToDirectory(fileName, "..\\..\\..\\data_to_parse");
+                    string parsePath = "..\\..\\..\\data_to_parse";
                     System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(parsePath);
                     System.IO.FileInfo[] files = di.GetFiles("*.txt");
                     foreach (var x in files)
@@ -90,7 +90,7 @@ namespace NewLangGeneration
             if (dialog == DialogResult.OK)
             {
                 string fileName = saveFileDialog1.FileName;
-                FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+                var fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
                 byte[] byteText = System.Text.Encoding.ASCII.GetBytes(txtFile.Text);
                 fs.Write(byteText, 0, byteText.Length);
                 fs.Close();
@@ -103,8 +103,8 @@ namespace NewLangGeneration
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            System.IO.StreamReader file =
-                new System.IO.StreamReader("E:\\words.txt");
+            var file =
+                new System.IO.StreamReader("..\\..\\..\\words.txt");
             string line;
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -127,8 +127,8 @@ namespace NewLangGeneration
 
         private void button3_Click(object sender, EventArgs e)
         {
-            System.IO.StreamWriter file =
-                new System.IO.StreamWriter("E:\\words.txt");
+            var file =
+                new System.IO.StreamWriter("..\\..\\..\\words.txt");
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             long xx = 0;
@@ -190,18 +190,18 @@ namespace NewLangGeneration
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter("E:\\top100.json");
-            StreamReader poland = new StreamReader("E:\\polish.txt");
-            Dictionary<string, string> translation = new Dictionary<string, string>();
+            var file = new StreamWriter("..\\..\\..\\top100.json");
+            var poland = new StreamReader("..\\..\\..\\polish.txt");
+            var translation = new Dictionary<string, string>();
             string eng, pol;
             while ((eng=poland.ReadLine())!=null)
             {
                 pol = poland.ReadLine();
                 translation[eng] = pol;
             }
-            StreamReader wordsFile = new StreamReader("E:\\words.txt");
+            var wordsFile = new StreamReader("..\\..\\..\\words.txt");
             //list.Sort((x, y) => y.Item1.CompareTo(x.Item1));
-            List<Tuple<string, long>> result = new List<Tuple<string, long>>();
+            var result = new List<Tuple<string, long>>();
             string lineWord, lineNum;
             
             while ((lineWord=wordsFile.ReadLine())!=null)
@@ -212,7 +212,7 @@ namespace NewLangGeneration
             }
             result.Sort((x, y) => y.Item2.CompareTo(x.Item2));
             //result.Reverse();
-            List<Translation> resultToJSON = new List<Translation>();
+            var resultToJSON = new List<Translation>();
             for (int i=0;i<100;i++)
             {
                 resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
@@ -220,7 +220,7 @@ namespace NewLangGeneration
             file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
             file.Close();
             lbx.Items.Add("top100 finished");
-            file = new StreamWriter("E:\\top1000.json");
+            file = new StreamWriter("..\\..\\..\\top1000.json");
             for (int i = 10; i < 1000; i++)
             {
                 resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
@@ -229,7 +229,7 @@ namespace NewLangGeneration
             file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
             file.Close();
             lbx.Items.Add("top1000 finished");
-            file = new StreamWriter("E:\\top10000.json");
+            file = new StreamWriter("..\\..\\..\\top10000.json");
             for (int i = 1000; i < 10000; i++)
             {
                 resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));

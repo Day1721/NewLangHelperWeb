@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NewLangGeneration
 {
@@ -26,7 +23,7 @@ namespace NewLangGeneration
         public Dictionary<string,long> getStatistics()
         {
             var x = parentNode.getReversedEndings();
-            Dictionary<string, long> result = new Dictionary<string, long>();
+            var result = new Dictionary<string, long>();
             foreach (var i in x)
             {
                 //i.Key.RemoveAt((i.Key.Count - 1));
@@ -82,7 +79,7 @@ namespace NewLangGeneration
 
         public void analyzeString(string x, int pos)
         {
-            if (isWord && (pos == x.Length || !Utility.isLetter(x[pos])))
+            if (isWord && (pos == x.Length || !Char.IsLetter(x[pos])))
             {
                 mut.WaitOne();
                 value++;
@@ -149,7 +146,7 @@ namespace NewLangGeneration
 
         public List < KeyValuePair <List <char> , long> > getReversedEndings()
         {
-            List<KeyValuePair < List<char>, long> > result = new List<KeyValuePair< List<char> , long>>();
+            var result = new List<KeyValuePair< List<char> , long>>();
             foreach(var i in listPointers)
             {
                 var toAdd = i.getReversedEndings();

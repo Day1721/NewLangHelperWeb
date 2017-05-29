@@ -12,20 +12,10 @@ namespace ZipUnzipBooks
     {
         static void Main(string[] args)
         {
-            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(@"E:\\books");
-            System.IO.FileInfo[] files = di.GetFiles("*.zip");
-            List<Thread> threads = new List<Thread>();
-            foreach (var x in files)
-            {
-                Thread t = new Thread(unzip);
-                threads.Add(t);
-                t.Start(x.FullName);
+            var di = new DirectoryInfo(@"..\\..\\..\\books");
+            var files = di.GetFiles("*.zip");
+            Parallel.ForEach(files, (x) => unzip(x));
 
-            }
-            foreach (var x in threads)
-            {
-                x.Join();
-            }
         }
 
 
@@ -35,19 +25,19 @@ namespace ZipUnzipBooks
             string name = (string)fileName;
             try
             {
-                ZipFile.ExtractToDirectory(name, "E:\\books\\texts");
+                ZipFile.ExtractToDirectory(name, "..\\..\\..\\books\\texts");
             }
             catch
             {
 
             }
             string pureName = Path.GetFileNameWithoutExtension(name);
-            if (Directory.Exists("E:\\books\\texts\\" + pureName))
+            if (Directory.Exists("..\\..\\..\\books\\texts\\" + pureName))
             {
                 // This path is a directory
                 try
                 {
-                    File.Copy("E:\\books\\texts\\" + pureName + "\\" + pureName + ".txt", "E:\\books\\texts\\" + pureName + ".txt");
+                    File.Copy("..\\..\\..\\books\\texts\\" + pureName + "\\" + pureName + ".txt", "..\\..\\..\\books\\texts\\" + pureName + ".txt");
                 }
                 catch
                 {
@@ -56,7 +46,7 @@ namespace ZipUnzipBooks
                 try
                 {
                     
-                    Directory.Delete("E:\\books\\texts\\" + pureName, true);
+                    Directory.Delete("..\\..\\..\\books\\texts\\" + pureName, true);
 
                 }
                 catch

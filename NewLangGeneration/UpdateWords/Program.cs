@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,21 +8,17 @@ namespace UpdateWords
 {
     class Program
     {
-        static bool isCapital(char c)
-        {
-            return (c >= 'A' && c <= 'Z');
-        }
 
         static void Main(string[] args)
         {
-            System.IO.StreamReader file =
-                new System.IO.StreamReader("E:\\words_0.txt");
-            System.IO.StreamWriter result = new System.IO.StreamWriter("E:\\words.txt");
+            var file =
+                new StreamReader("..\\..\\..\\words_0.txt");
+            var result = new StreamWriter("..\\..\\..\\words.txt");
             string line;
             while ((line = file.ReadLine()) != null)
             {
                 
-                if (line!="" && !isCapital(line[0]))
+                if (line!="" && !Char.IsUpper(line[0]))
                 {
                     result.WriteLine(line);
                     result.WriteLine("0");

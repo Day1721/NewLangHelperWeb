@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace NewLangGeneration
 {
-    public class Utility
-    {
-        public static bool isLetter(char x)
-        {
-            return (x <= 'z' && x >= 'a') || (x >= 'A' && x <= 'Z');
-        }
-    }
     class smartReader
     {
         private char[] endOfString;
@@ -38,15 +31,15 @@ namespace NewLangGeneration
             while (credit<=22)
             {
                 char t;
-                try
+                if (!file.EndOfStream)
                 {
                     t = (char)(file.Read());
-                    if (Utility.isLetter(t))
+                    if (Char.IsLetter(t))
                     {
                         t = Char.ToLower(t);
                     }
                 }
-                catch (Exception e)
+                else
                 {
                     t = (char)(0);
                 }
@@ -63,7 +56,7 @@ namespace NewLangGeneration
                 char t;
                 if ((t = (char)(file.Read())) != -1)
                 {
-                    if (Utility.isLetter(t))
+                    if (Char.IsLetter(t))
                     {
                         t = Char.ToLower(t);
                     }
@@ -89,11 +82,11 @@ namespace NewLangGeneration
             }
             pointerToRead++;
             pointerToRead %= max_len;
-            if (!Utility.isLetter(currentStart) || start)
+            if (!Char.IsLetter(currentStart) || start)
             {
                 
                 readForward();
-                List<char> wordToReturn = new List<char>();
+                var wordToReturn = new List<char>();
                 int i = pointerToRead;
                 if (start)
                     i--;

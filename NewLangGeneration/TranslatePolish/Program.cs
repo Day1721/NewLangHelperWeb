@@ -18,9 +18,9 @@ namespace TranslatePolish
              TranslationClient client = TranslationClient.Create();
              //var response = client.TranslateText("Hello World.", "ru");
              //Console.WriteLine(response.TranslatedText);*/
-            System.IO.StreamReader file =
-                new System.IO.StreamReader("E:\\words.txt");
-            System.IO.StreamWriter result = new System.IO.StreamWriter("E:\\polish.txt");
+            var file =
+                new StreamReader("..\\..\\..\\words.txt");
+            var result = new StreamWriter("..\\..\\..\\polish.txt");
             string line;
             while ((line = file.ReadLine()) != null)
             {
