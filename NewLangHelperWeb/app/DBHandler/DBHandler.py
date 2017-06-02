@@ -50,3 +50,7 @@ def add_user_to_group_and_generate_hash(serializer, user):
 
 def add_wordcard_to_group(wordcard, group):
     group.words.add(wordcard)
+
+def add_wordcards_to_group(wordcards, group):
+    for word in wordcards:
+        add_wordcard_to_group(word, group)

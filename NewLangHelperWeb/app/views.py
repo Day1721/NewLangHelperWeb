@@ -149,7 +149,7 @@ class AddCard(APIView):
         if not serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
         word = serializer.save()
-        DBHandler.add_wordcard_to_group(word, group)
+        DBHandler.add_wordcards_to_group(word, group)
 
         return Response({}, status=status.HTTP_201_CREATED)
 
