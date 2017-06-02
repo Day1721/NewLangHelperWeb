@@ -1,9 +1,9 @@
-<div background="../../lang1.jpg">
-    <h3 id="temp">Home Page</h3>
+<h3>Home Page</h3>
 <div class="loader" ng-show="isLoading"></div>
 
-<a ng-href="/#/add/group/">Add new group</a>
-<a ng-href="/#/add/card/">Add new card</a>
+<a href="/#/add/group/">Add new group</a>
+<a href="/#/add/card/">Add new card</a>
+<a href="/#/share">Share</a>
 
 <ul ng-if="dataLength > 0">
     <li ng-repeat="(name, list) in data">
@@ -32,5 +32,6 @@
 </ul>
 
 <h3 ng-if="dataLength == 0">There is no groups</h3>
-
-</div>
+<!--
+<div class="background-img"></div> //non-working image
+-->

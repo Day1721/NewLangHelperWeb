@@ -1,17 +1,17 @@
-from .serializers import *
-from .DBHandler import DBHandler
-from app.permissions import IsAuthenticatedOrOptions
-from rest_framework.views import APIView
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
-from app.models import CardGroup
+from rest_framework.views import APIView
+
+from app.permissions import IsAuthenticatedOrOptions
+from .DBHandler import DBHandler
+from .serializers import *
 
 
 def group_exists(pk):
     group = DBHandler.get_group_from_id(pk)
 
-    if group == None:
+    if group is None:
         return False, group
 
     return True, group
@@ -29,6 +29,7 @@ def word_exists(group_pk, pk):
         return True, word
 
     return False, None
+
 
 # Usage (need to be logged in)
 # /groups/
@@ -48,7 +49,7 @@ class GroupList(APIView):
     def post(self, request, format=None):
         serializer = GroupSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
-            if request.user.cardgroup_set.filter(name=request.data['name']).count() == 1: # TODO dbhandler
+            if request.user.cardgroup_set.filter(name=request.data['name']).count() == 1:  # TODO dbhandler
                 return Response({
                     'error': 'Group with the same name already exists.'
                 }, status=status.HTTP_400_BAD_REQUEST)
@@ -78,7 +79,6 @@ class GroupDetail(APIView):
             return Response({
                 'error': 'Group does not exist.'
             }, status=status.HTTP_404_NOT_FOUND)
-
 
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -222,7 +222,8 @@ class CardDetail(APIView):
         word.delete()
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-#TODO wywalić te brzydkie rzeczy do funkcji
+
+# TODO wywalić te brzydkie rzeczy do funkcji
 
 
 class Invitation(APIView):

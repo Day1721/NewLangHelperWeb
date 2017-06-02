@@ -17,3 +17,16 @@ using python http.client (requires python 3)
 ```shell
 python -m http.client
 ```
+
+# Tests
+
+requirements: protractor
+```shell
+npm install -g protractor # -g need root/admin permissions
+webdriver-manager update
+webdriver-manager start
+```
+execution (from root of project):
+```shell
+protractor Testing/Config.js
+```

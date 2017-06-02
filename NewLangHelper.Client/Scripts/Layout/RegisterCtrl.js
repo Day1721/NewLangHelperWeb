@@ -5,28 +5,23 @@
         .module('layout')
         .controller('RegisterCtrl', registerCtrl);
 
-    registerCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies', 'serverUrl'];
+    registerCtrl.$inject = ['$scope', '$rootScope', 'http', '$location', '$cookies'];
 
-    function registerCtrl($scope, $rootScope, $http, $location, $cookies, serverUrl) {
+    function registerCtrl($scope, $rootScope, http, $location, $cookies) {
         $scope.title = 'RegisterCtrl';
         $scope.error = undefined;
 
         $scope.register = function () {
-            $http({
-                method: 'POST',
-                url: `${serverUrl}/rest-auth/registration/`,
-                data: {
+            http.post('/rest-auth/registration/', {
                     'username': $scope.username,
                     'email': $scope.email,
                     'password1': $scope.password1,
                     'password2': $scope.password2
-                }
             }).then(
-                function success(response) {
-                    //alert(`OK, token = ${response.data.key}`); //DEBUGGING
+                successResponse => {
                     alert('You was successfully registred.\n' +
                         'Do not forget to activate your account, look in your mail.');
-                    $rootScope.token = response.data.key;
+                    $rootScope.token = successResponse.data.key;
                     $cookies.put('token', $rootScope.token);
                     $cookies.put('username', $scope.username);
                     $rootScope.username = $scope.username;
@@ -36,7 +31,7 @@
                     $location.replace();
                 },
                 function error(response) {
-                    alert(`ERROR, code = ${response.status}`);
+                    //alert(`ERROR, code = ${response.status}`);
                     if (response.status === 400) {
                         $scope.error = response.data;
                     }

@@ -7,10 +7,11 @@
     
     app.run(runFunc);
 
-    runFunc.$inject = ['$rootScope', '$cookies'];
+    runFunc.$inject = ['$rootScope', '$cookies', 'loginPath'];
 
-    function runFunc($rootScope, $cookies) {
+    function runFunc($rootScope, $cookies, loginPath) {
         $rootScope.username = $cookies.get('username');
         $rootScope.isLogged = $rootScope.username !== undefined;
+        $rootScope.loginPath = loginPath;
     }
 })();

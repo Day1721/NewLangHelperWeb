@@ -69,6 +69,8 @@
                 console.log(data);
             }, toLoginIf403);
 
+
+
         function toLoginIf403(response) {
             if (response.status === 403) {
                 $location.path('/login');

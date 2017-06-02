@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    const app = angular.module('layout', ['config']);
+    const app = angular.module('layout', ['config', 'services']);
 
     app.config(config);
 

@@ -5,9 +5,9 @@
         .module('layout')
         .controller('LoginCtrl', loginCtrl);
 
-    loginCtrl.$inject = ['$scope', '$rootScope', '$http', '$location', '$cookies', 'serverUrl'];
+    loginCtrl.$inject = ['$scope', '$rootScope', 'http', '$location', '$cookies'];
 
-    function loginCtrl($scope, $rootScope, $http, $location, $cookies, serverUrl) {
+    function loginCtrl($scope, $rootScope, http, $location, $cookies) {
         /*if ($cookies.get('token') !== '' && $rootScope.isLogged) {
             //TRY to go home, if redirect back, isLogged will be false
             $location.path('/home');
@@ -22,16 +22,12 @@
         $scope.title = 'LoginCtrl';
 
         $scope.login = function() {
-            $http({
-                method: 'POST',
-                url: `${serverUrl}/rest-auth/login/`,
-                data: {
+            http.post('/rest-auth/login/', {
                     'username': $scope.username,
                     'password': $scope.password
-                }
             }).then(
-                function success(response) {
-                    $rootScope.token = response.data.key;
+                successResponse => {
+                    $rootScope.token = successResponse.data.key;
                     $cookies.put('token', $rootScope.token);
                     $cookies.put('username', $scope.username); 
                     $rootScope.username = $scope.username;
@@ -40,9 +36,11 @@
                     $location.path('/home');
                     $location.replace();
                 },
-                function error(response) {
-                    alert(`ERROR, code = ${response.status}`);
-                    console.log(response.headers());
+                errorResponse => {
+                    if (errorResponse.status === 400) {
+                        alert('Incorrect login or password');
+                    }
+                    console.log(errorResponse);
                 });
         };
     }

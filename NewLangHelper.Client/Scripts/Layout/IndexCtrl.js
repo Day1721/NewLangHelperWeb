@@ -10,6 +10,5 @@
     function indexCtrl($scope) {
         $scope.title = 'IndexCtrl';
 
-        $scope.loginPath = 'Views/Layout/LoginPartial.html';
     }
 })();

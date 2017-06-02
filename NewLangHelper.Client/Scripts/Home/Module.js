@@ -20,6 +20,10 @@
             .when('/add/group/', {
                 templateUrl: 'Views/Home/AddGroup.html',
                 controller: 'AddGroupCtrl'
+            })
+            .when('/share', {
+                templateUrl: 'Views/Home/Share.html',
+                controller: 'ShareCtrl'
             });
     }
 })();

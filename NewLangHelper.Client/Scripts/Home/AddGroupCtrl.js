@@ -5,9 +5,9 @@
         .module('home')
         .controller('AddGroupCtrl', addGroupCtrl);
 
-    addGroupCtrl.$inject = ['$scope', 'localStorageService', '$http', 'serverUrl', '$location'];
+    addGroupCtrl.$inject = ['$scope', 'localStorageService', 'http', '$location'];
 
-    function addGroupCtrl($scope, localStorage, $http, serverUrl, $location) {
+    function addGroupCtrl($scope, localStorage, http, $location) {
         $scope.title = 'AddGroupCtrl';
 
         $scope.submit = function() {
@@ -15,15 +15,11 @@
             console.log(groups);
             if ($scope.groupName in groups) return;
 
-            $http({
-                method: 'POST',
-                url: `${serverUrl}/groups/`,
-                data: {
+            http.post('/groups/', {
                     name: $scope.groupName,
                     firstLanguage: $scope.firstLanguage,
                     secondLanguage: $scope.secondLanguage,
                     words: []
-                }
             }).then(
                 successResponce => {
                     console.log(successResponce);

@@ -12,15 +12,15 @@ namespace ZipUnzipBooks
     {
         static void Main(string[] args)
         {
-            var di = new DirectoryInfo(@"..\\..\\..\\books");
+            var di = new DirectoryInfo(@"..\..\..\books");
             var files = di.GetFiles("*.zip");
-            Parallel.ForEach(files, (x) => unzip(x));
+            Parallel.ForEach(files, Unzip);
 
         }
 
 
 
-        private static void unzip(object fileName)
+        private static void Unzip(object fileName)
         {
             string name = (string)fileName;
             try

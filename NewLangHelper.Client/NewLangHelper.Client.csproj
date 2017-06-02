@@ -67,6 +67,10 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Images\lang1.jpg" />
+    <Content Include="Images\move1.jpg" />
+    <Content Include="Images\move2.jpg" />
+    <Content Include="Images\move3.jpg" />
     <Content Include="node_modules\angular-cookies\angular-cookies.js" />
     <Content Include="node_modules\angular-cookies\angular-cookies.min.js" />
     <Content Include="node_modules\angular-cookies\index.js" />
@@ -370,15 +374,21 @@
     <Content Include="Scripts\Home\AddGroupCtrl.js" />
     <Content Include="Scripts\Home\AddWordCtrl.js" />
     <Content Include="Scripts\Home\HomeCtrl.js" />
+    <Content Include="Scripts\Home\ShareCtrl.js" />
     <Content Include="Scripts\Layout\IndexCtrl.js" />
     <Content Include="Scripts\Layout\LoginCtrl.js" />
     <Content Include="Scripts\Layout\LogoutCtrl.js" />
     <Content Include="Scripts\Layout\Module.js" />
     <Content Include="Scripts\Layout\RegisterCtrl.js" />
     <Content Include="Scripts\Home\Module.js" />
+    <Content Include="Scripts\Services\Module.js" />
+    <Content Include="Testing\Config.js" />
+    <Content Include="Testing\LoginTest.js" />
+    <Content Include="Testing\TitleTest.js" />
     <Content Include="Views\Home\AddGroup.html" />
     <Content Include="Views\Home\AddWord.html" />
     <Content Include="Views\Home\Home.html" />
+    <Content Include="Views\Home\Share.html" />
     <Content Include="Views\Layout\Contact.html" />
     <Content Include="Views\Layout\Index.html" />
     <Content Include="Views\Layout\Login.html" />

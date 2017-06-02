@@ -1,0 +1,21 @@
+﻿<h3>Here you can share your own group</h3>
+
+<label> Group name:
+    <select ng-options="opt.name group by opt.langs for opt in data.options" 
+            ng-model="data.selected">
+    </select>
+</label>
+
+<input ng-model="data.selected.hash" contenteditable="true" type="text" readonly/>
+
+<h3>Or use share code to access new groups</h3>
+
+<form ng-submit="useCode()">
+    
+    <input type="text"
+           maxlength="130"
+           ng-model="code"
+           required/>
+
+    <input class="btn btn-primary" type="submit" value="Accept"/>
+</form>

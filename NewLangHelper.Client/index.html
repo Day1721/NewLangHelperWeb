@@ -14,10 +14,12 @@
     <link href="Content/Site.css" rel="stylesheet" />
     
     <script src="Scripts/Config/Module.js"></script>
+    <script src="Scripts/Services/Module.js"></script>
     <script src="Scripts/Home/Module.js"></script>
     <script src="Scripts/Home/HomeCtrl.js"></script>
     <script src="Scripts/Home/AddWordCtrl.js"></script>
     <script src="Scripts/Home/AddGroupCtrl.js"></script>
+    <script src="Scripts/Home/ShareCtrl.js"></script>
     <script src="Scripts/Layout/Module.js"></script>
     <script src="Scripts/Layout/IndexCtrl.js"></script>
     <script src="Scripts/Layout/LoginCtrl.js"></script>
@@ -26,12 +28,7 @@
     <script src="Scripts/App.js"></script>
 </head>
 
-<style>
-</style>
-
-<body ng-controller="IndexCtrl">
-
-
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -52,7 +49,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="container body-content">
         <ng-view></ng-view>
     </div>
 </body>

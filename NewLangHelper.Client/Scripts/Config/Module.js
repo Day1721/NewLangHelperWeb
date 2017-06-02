@@ -3,8 +3,9 @@
 
     const app = angular.module('config', ['ngRoute', 'ngCookies', 'LocalStorageModule']);
 
-    app.config(config);
-    app.constant('serverUrl', 'http://localhost:8001');
+    app.config(config)
+        .constant('debug', true)
+        .constant('loginPath', 'Views/Layout/LoginPartial.html');
 
     config.$inject = ['$httpProvider', '$locationProvider', 'localStorageServiceProvider'];
 
