@@ -6,23 +6,23 @@ namespace NewLangGeneration
 {
     class Trie
     {
-        private readonly Node parentNode;
+        private readonly Node _parentNode;
         
         public Trie()
         {
-            parentNode = new Node((char)(0));
+            _parentNode = new Node('\0');
         }
-        public void addWord(string x,long current)
+        public void AddWord(string x,long current)
         {
-            parentNode.addWord(x, 0,current);
+            _parentNode.AddWord(x, 0,current);
         }
-        public void analyzeString(string x)
+        public void AnalyzeString(string x)
         {
-            parentNode.analyzeString(x, 0);
+            _parentNode.AnalyzeString(x, 0);
         }
-        public Dictionary<string,long> getStatistics()
+        public Dictionary<string,long> GetStatistics()
         {
-            var x = parentNode.getReversedEndings();
+            var x = _parentNode.GetReversedEndings();
             var result = new Dictionary<string, long>();
             foreach (var i in x)
             {
@@ -39,91 +39,91 @@ namespace NewLangGeneration
 
     class Node
     {
-        const int maxSize = 15;
-        private readonly char letter;
-        private long value;
-        private List<Node> listPointers;
-        private Dictionary<char,Node> arrayPointers;
-        private int size;
-        private static Mutex mut;
-        private bool isWord;
-        public bool Word {  get { return isWord; } }
-        public char Letter { get { return letter; } }
-        public long Value { get { return value; } }
+        const int MaxSize = 15;
+        private long _value;
+        private readonly List<Node> _listPointers;
+        private readonly Dictionary<char,Node> _arrayPointers;
+        private int _size;
+        private static Mutex _mut;
+        private bool _isWord;
+        public bool Word => _isWord;
+        public char Letter { get; }
+        public long Value => _value;
+
         public Node(char letter)
         {
-            this.letter = letter;
-            value = 0;
-            mut = new Mutex();
-            size = 0;
-            listPointers = new List<Node>();
-            arrayPointers = new Dictionary<char, Node>();
+            Letter = letter;
+            _value = 0;
+            _mut = new Mutex();
+            _size = 0;
+            _listPointers = new List<Node>();
+            _arrayPointers = new Dictionary<char, Node>();
         }
 
-        public void addWord(string x,int pos,long current)
+        public void AddWord(string x,int pos,long current)
         {
             if (pos == x.Length)
             {
-                isWord = true;
-                value += current;
+                _isWord = true;
+                _value += current;
                 return;
             }
             char now = x[pos];
-            Node nxt = getChild(now);
+            Node nxt = GetChild(now);
             if (nxt == null)
             {
-                nxt = createChild(now);
+                nxt = CreateChild(now);
             }
-            nxt.addWord(x, pos + 1,current);
+            nxt.AddWord(x, pos + 1,current);
         }
 
-        public void analyzeString(string x, int pos)
+        public void AnalyzeString(string x, int pos)
         {
-            if (isWord && (pos == x.Length || !Char.IsLetter(x[pos])))
+            if (_isWord && (pos == x.Length || !Char.IsLetter(x[pos])))
             {
-                mut.WaitOne();
-                value++;
-                mut.ReleaseMutex();
+                _mut.WaitOne();
+                _value++;
+                _mut.ReleaseMutex();
             }
             if (pos == x.Length)
             {
                 return;
             }
             char now = x[pos];
-            Node nxt = getChild(now);
+            Node nxt = GetChild(now);
             if (nxt != null)
             {
-                nxt.analyzeString(x, pos + 1);
+                nxt.AnalyzeString(x, pos + 1);
             }
         }
 
-        private Node createChild(char x)
+        private Node CreateChild(char x)
         {
             Node toAdd = new Node(x);
-            if (size >= maxSize)
+            if (_size >= MaxSize)
             {
-                foreach (var i in listPointers)
+                foreach (var i in _listPointers)
                 {
-                    arrayPointers[i.Letter] = i;
+                    _arrayPointers[i.Letter] = i;
                 }
-                listPointers.Clear();
-                arrayPointers[x] = toAdd;
+                _listPointers.Clear();
+                _arrayPointers[x] = toAdd;
             }
             else
             {
-                listPointers.Add(toAdd);
+                _listPointers.Add(toAdd);
             }
-            size++;
+            _size++;
             return toAdd;
         }
 
-        private Node getChild(char x)
+        private Node GetChild(char x)
         {
-            if (size >= maxSize)
+            if (_size >= MaxSize)
             {
-                if (arrayPointers.ContainsKey(x))
+                if (_arrayPointers.ContainsKey(x))
                 {
-                    return arrayPointers[x];
+                    return _arrayPointers[x];
                 }
                 else
                 {
@@ -132,7 +132,7 @@ namespace NewLangGeneration
             }
             else
             {
-                foreach (var i in listPointers)
+                foreach (var i in _listPointers)
                 {
                     if (i.Letter == x)
                     {
@@ -144,30 +144,30 @@ namespace NewLangGeneration
         }
 
 
-        public List < KeyValuePair <List <char> , long> > getReversedEndings()
+        public List < KeyValuePair <List <char> , long> > GetReversedEndings()
         {
             var result = new List<KeyValuePair< List<char> , long>>();
-            foreach(var i in listPointers)
+            foreach(var i in _listPointers)
             {
-                var toAdd = i.getReversedEndings();
+                var toAdd = i.GetReversedEndings();
                 foreach (var u in toAdd)
                 {
                     u.Key.Add(i.Letter);
                     result.Add(u);
                 }
             }
-            foreach (var i in arrayPointers)
+            foreach (var i in _arrayPointers)
             {
-                var toAdd = i.Value.getReversedEndings();
+                var toAdd = i.Value.GetReversedEndings();
                 foreach (var u in toAdd)
                 {
                     u.Key.Add(i.Value.Letter);
                     result.Add(u);
                 }
             }
-            if (isWord)
+            if (_isWord)
             {
-                result.Add(new KeyValuePair<List<char>, long>(new List<char>(), value));
+                result.Add(new KeyValuePair<List<char>, long>(new List<char>(), _value));
             }
             return result;
         }

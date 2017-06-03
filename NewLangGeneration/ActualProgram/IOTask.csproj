@@ -190,8 +190,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="smartReader.cs" />
-    <Compile Include="trie.cs" />
+    <Compile Include="SmartReader.cs" />
+    <Compile Include="Trie.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,51 +10,30 @@ namespace ZipUnzipBooks
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            var di = new DirectoryInfo(@"..\..\..\books");
-            var files = di.GetFiles("*.zip");
-            Parallel.ForEach(files, Unzip);
+        private const string MainPath = "books/texts";
 
+        static void Main()
+        {
+            var files = Directory.GetFiles("books", "*.zip");
+            Directory.Delete(MainPath, true);  // remove old trash (IMO needed)
+            Directory.CreateDirectory(MainPath);
+            Parallel.ForEach(files, Unzip);
         }
 
-
-
-        private static void Unzip(object fileName)
+        private static void Unzip(string filename)
         {
-            string name = (string)fileName;
-            try
+            ZipFile.ExtractToDirectory(filename, MainPath);
+
+            var pureName = Path.GetFileNameWithoutExtension(filename);
+            var dirName = Path.Combine(MainPath, pureName);
+
+            if (Directory.Exists(dirName))
             {
-                ZipFile.ExtractToDirectory(name, "..\\..\\..\\books\\texts");
+                File.Copy(Path.Combine(dirName, $"{pureName}.txt"), 
+                    Path.Combine(MainPath, $"{pureName}.txt"));
+
+                Directory.Delete(dirName, true);
             }
-            catch
-            {
-
-            }
-            string pureName = Path.GetFileNameWithoutExtension(name);
-            if (Directory.Exists("..\\..\\..\\books\\texts\\" + pureName))
-            {
-                // This path is a directory
-                try
-                {
-                    File.Copy("..\\..\\..\\books\\texts\\" + pureName + "\\" + pureName + ".txt", "..\\..\\..\\books\\texts\\" + pureName + ".txt");
-                }
-                catch
-                {
-
-                }
-                try
-                {
-                    
-                    Directory.Delete("..\\..\\..\\books\\texts\\" + pureName, true);
-
-                }
-                catch
-                {
-
-                }
-            }
-            return;
         }
     }
 }
