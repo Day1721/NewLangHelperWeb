@@ -102,7 +102,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Init";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.wordsInit);
+            this.button2.Click += new System.EventHandler(this.WordsInit);
             // 
             // button3
             // 

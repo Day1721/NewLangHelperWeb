@@ -1,19 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using java.util;
-using System.Timers;
 using System.Diagnostics;
-using System.Threading;
-using edu.stanford.nlp.pipeline;
-using Console = System.Console;
 using Newtonsoft.Json;
 using Google.Cloud.Translation.V2;
 using System.Threading.Tasks;
@@ -23,65 +15,51 @@ namespace NewLangGeneration
 
     public partial class Form1 : Form
     {
-        Trie words = new Trie();
-        const string BookPath = "books\\texts";
-        private string currentLanguage = "Polish";
-        private System.Object lockThis = new System.Object();
+        readonly Trie _words = new Trie();
+        const string BookPath = @"books\texts";
+        private string _currentLanguage = "Polish";
 
         public Form1()
         {
             InitializeComponent();
             if (!File.Exists("words.txt"))
             {
-                createWords();
+                CreateWords();
             }
-            wordsInit();
+            WordsInit();
         }
 
-        private void createWords()
+        private void CreateWords()
         {
-            string InputFileName = "words_0.txt";
-            string OutputFileName = "words.txt";
+            const string inputFileName = "words_0.txt";
+            const string outputFileName = "words.txt";
 
-            var input = File.ReadAllLines(InputFileName);
+            var input = File.ReadAllLines(inputFileName);
 
             var res = input.Aggregate(string.Empty, (acc, line) =>
             {
                 if (line != string.Empty && !char.IsUpper(line[0]))
                 {
-                    acc += $"{line}\n";
-                    acc += $"0\n";
+                    acc += $"{line}\n0\n";
                 }
                 return acc;
             });
 
-            File.WriteAllText(OutputFileName, res);
+            File.WriteAllText(outputFileName, res);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-
-            Environment.Exit(0);
-        }
+        private void btnExit_Click(object sender, EventArgs e) => Environment.Exit(0);
 
 
+        private void btnClear_Click(object sender, EventArgs e) => lbx.Items.Clear();
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void WordsInit() => WordsInit(this, null);
+
+        private void WordsInit(object sender, EventArgs e)
         {
-            lbx.Items.Clear();
-        }
-        private void wordsInit()
-        {
-            object buf = new object();
-            EventArgs e = new EventArgs();
-            wordsInit(buf, e);
-        }
-        private void wordsInit(object sender, EventArgs e)
-        {
-            var file =
-                new System.IO.StreamReader("words.txt");
+            var file = new StreamReader("words.txt");
             string line;
-            Stopwatch stopWatch = new Stopwatch();
+            var stopWatch = new Stopwatch();
             stopWatch.Start();
             long xx = 0;
             while ((line = file.ReadLine()) != null)
@@ -89,11 +67,11 @@ namespace NewLangGeneration
                 line = line.ToLower();
                 xx++;
                 string line2 = file.ReadLine();
-                long num = Int64.Parse(line2);
-                words.AddWord(line, num);
+                long num = long.Parse(line2);
+                _words.AddWord(line, num);
             }
             TimeSpan ts = stopWatch.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            var elapsedTime = string.Format("{0:00}:{1:00}:{2:00}.{3:00}",
             ts.Hours, ts.Minutes, ts.Seconds,
             ts.Milliseconds / 10);
             lbx.Items.Add("Read finished " + elapsedTime + " lines read: " + xx);
@@ -109,7 +87,6 @@ namespace NewLangGeneration
             {
                 string fileName = openFileDialog1.FileName;
 
-
                 try
                 {
                     if (Directory.Exists("data_to_parse"))
@@ -117,10 +94,10 @@ namespace NewLangGeneration
                         Directory.Delete("data_to_parse", true);
                     }
                     ZipFile.ExtractToDirectory(fileName, "data_to_parse");
-                    string parsePath = "data_to_parse";
-                    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(parsePath);
-                    System.IO.FileInfo[] files = di.GetFiles("*.txt");
-                    var names = new List<Object>();
+                    const string parsePath = "data_to_parse";
+                    var di = new DirectoryInfo(parsePath);
+                    FileInfo[] files = di.GetFiles("*.txt");
+                    var names = new List<string>();
                     
                     foreach(var x in files)
                     {
@@ -150,12 +127,11 @@ namespace NewLangGeneration
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var file =
-                new System.IO.StreamWriter("words.txt");
-            Stopwatch stopWatch = new Stopwatch();
+            var file = new StreamWriter("words.txt");
+            var stopWatch = new Stopwatch();
             stopWatch.Start();
             long xx = 0;
-            var toSave = words.GetStatistics();
+            var toSave = _words.GetStatistics();
 
             foreach (var x in toSave)
             {
@@ -174,24 +150,23 @@ namespace NewLangGeneration
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             string fileName = (string)e.Argument;
-            SmartReader reader = new SmartReader(fileName);
+            var reader = new SmartReader(fileName);
             string nxt;
-            while ((nxt = reader.nextChar()) != null)
+            while ((nxt = reader.NextChar()) != null)
             {
-                words.AnalyzeString(nxt);
+                _words.AnalyzeString(nxt);
             }
             
 
         }
 
-        private void thread_DoWork(object fileNameO)
+        private void thread_DoWork(string fileName)
         {
-            string fileName = (string)fileNameO;
-            SmartReader reader = new SmartReader(fileName);
+            var reader = new SmartReader(fileName);
             string nxt;
-            while ((nxt = reader.nextChar()) != null)
+            while ((nxt = reader.NextChar()) != null)
             {
-                words.AnalyzeString(nxt);
+                _words.AnalyzeString(nxt);
             }
             reader.Close();
         }
@@ -202,12 +177,13 @@ namespace NewLangGeneration
         }
         class Translation
         {
-            public string eng;
-            public string pol;
+            public string Eng { get; }
+            public string Pol { get; }
+
             public Translation(string en, string pl)
             {
-                eng = en;
-                pol = pl;
+                Eng = en;
+                Pol = pl;
             }
 
         }
@@ -233,48 +209,45 @@ namespace NewLangGeneration
                 result.Add(new Tuple<string, long>(lineWord, key));
             }
             result.Sort((x, y) => y.Item2.CompareTo(x.Item2));
-            var resultToJSON = new List<Translation>();
+            var resultToJson = new List<Translation>();
             for (int i = 0; i < 100; i++)
             {
-                resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
+                resultToJson.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
             }
-            file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
+            file.WriteLine(JsonConvert.SerializeObject(resultToJson));
             file.Close();
             lbx.Items.Add("top100 finished");
             file = new StreamWriter("top1000.json");
             for (int i = 10; i < 1000; i++)
             {
-                resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
+                resultToJson.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
 
             }
-            file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
+            file.WriteLine(JsonConvert.SerializeObject(resultToJson));
             file.Close();
             lbx.Items.Add("top1000 finished");
             file = new StreamWriter("top10000.json");
             for (int i = 1000; i < 10000; i++)
             {
-                resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
+                resultToJson.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
 
             }
-            file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
+            file.WriteLine(JsonConvert.SerializeObject(resultToJson));
             file.Close();
             lbx.Items.Add("top10000 finished");
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentLanguage = (string)listBox1.SelectedItem;
+            _currentLanguage = (string)listBox1.SelectedItem;
         }
 
         private void buttonTranslate_Click(object sender, EventArgs e)
         {
-            string lang = "pl";
-            string fileName = currentLanguage.ToLower() + ".txt";
-            switch (currentLanguage)
+            string lang;
+            string fileName = _currentLanguage.ToLower() + ".txt";
+            switch (_currentLanguage)
             {
-                case "Polish":
-                    lang = "pl";
-                    break;
                 case "Russian":
                     lang = "ru";
                     break;
