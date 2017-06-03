@@ -25,6 +25,7 @@ namespace NewLangGeneration
     {
         Trie words = new Trie();
         const string BookPath = "books\\texts";
+        private int wordNumber = 100;
         private string currentLanguage = "Polish";
         private System.Object lockThis = new System.Object();
 
@@ -171,18 +172,6 @@ namespace NewLangGeneration
             file.Close();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            string fileName = (string)e.Argument;
-            SmartReader reader = new SmartReader(fileName);
-            string nxt;
-            while ((nxt = reader.nextChar()) != null)
-            {
-                words.AnalyzeString(nxt);
-            }
-            
-
-        }
 
         private void thread_DoWork(object fileNameO)
         {
@@ -194,11 +183,6 @@ namespace NewLangGeneration
                 words.AnalyzeString(nxt);
             }
             reader.Close();
-        }
-
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            lbx.Items.Add("finished ");
         }
         class Translation
         {
@@ -213,14 +197,17 @@ namespace NewLangGeneration
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            var file = new StreamWriter("top100.json");
-            var poland = new StreamReader("polish.txt");
+            string fileName = "top" + wordNumber.ToString() + ".txt";
+
+            var file = new StreamWriter(fileName);
+            string resultName = currentLanguage.ToLower() + ".txt";
+            var dict = new StreamReader(resultName);
             var translation = new Dictionary<string, string>();
-            string eng, pol;
-            while ((eng = poland.ReadLine()) != null)
+            string eng, resultLanguage;
+            while ((eng = dict.ReadLine()) != null)
             {
-                pol = poland.ReadLine();
-                translation[eng] = pol;
+                resultLanguage = dict.ReadLine();
+                translation[eng] = resultLanguage;
             }
             var wordsFile = new StreamReader("words.txt");
             var result = new List<Tuple<string, long>>();
@@ -234,31 +221,14 @@ namespace NewLangGeneration
             }
             result.Sort((x, y) => y.Item2.CompareTo(x.Item2));
             var resultToJSON = new List<Translation>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < wordNumber; i++)
             {
                 resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
             }
             file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
             file.Close();
-            lbx.Items.Add("top100 finished");
+            lbx.Items.Add("top"  + wordNumber.ToString() + "finished");
             file = new StreamWriter("top1000.json");
-            for (int i = 10; i < 1000; i++)
-            {
-                resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
-
-            }
-            file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
-            file.Close();
-            lbx.Items.Add("top1000 finished");
-            file = new StreamWriter("top10000.json");
-            for (int i = 1000; i < 10000; i++)
-            {
-                resultToJSON.Add(new Translation(result[i].Item1, translation[result[i].Item1]));
-
-            }
-            file.WriteLine(JsonConvert.SerializeObject(resultToJSON));
-            file.Close();
-            lbx.Items.Add("top10000 finished");
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -356,6 +326,11 @@ namespace NewLangGeneration
 
                 Directory.Delete(dirName, true);
             }
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            wordNumber = (int)listBox2.SelectedItem;
         }
     }
 
