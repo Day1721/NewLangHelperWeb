@@ -9,22 +9,21 @@ namespace fixTranslation
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var file =
-                new StreamReader("..\\..\\..\\words.txt");
+                new StreamReader("words.txt");
             var file2 =
-                new StreamReader("..\\..\\..\\polish.txt");
-            var result = new StreamWriter("..\\..\\..\\polish_fix.txt");
-            var result2 = new StreamWriter("..\\..\\..\\words_fix.txt");
+                new StreamReader("polish.txt");
+            var result = new StreamWriter("polish_fix.txt");
+            var result2 = new StreamWriter("words_fix.txt");
             string line;
-            string line2;
-            while ((line=file.ReadLine())!=null)
+            while ((line = file.ReadLine()) != null)
             {
-                line2 = file2.ReadLine();
+                var line2 = file2.ReadLine();
                 string line3 = file.ReadLine();
-                
-                if (line2!="")
+
+                if (line2 != string.Empty)
                 {
                     result.WriteLine(line);
                     result.WriteLine(line2);
@@ -36,10 +35,10 @@ namespace fixTranslation
             file2.Close();
             result.Close();
             result2.Close();
-            File.Delete("..\\..\\..\\words.txt");
-            File.Delete("..\\..\\..\\polish.txt");
-            File.Copy("..\\..\\..\\words_fix.txt", "..\\..\\..\\words.txt");
-            File.Copy("..\\..\\..\\polish_fix.txt", "..\\..\\..\\polish.txt");
+            File.Delete("words.txt");
+            File.Delete("polish.txt");
+            File.Copy("words_fix.txt", "words.txt");
+            File.Copy("polish_fix.txt", "polish.txt");
 
         }
     }
