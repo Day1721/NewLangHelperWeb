@@ -33,13 +33,15 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRead = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
-            this.txtFile = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button4 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbx
@@ -88,14 +90,6 @@
             this.lblFileName.Size = new System.Drawing.Size(0, 13);
             this.lblFileName.TabIndex = 5;
             // 
-            // txtFile
-            // 
-            this.txtFile.Location = new System.Drawing.Point(404, 2);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(419, 251);
-            this.txtFile.TabIndex = 6;
-            this.txtFile.Text = "";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -108,7 +102,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Init";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.wordsInit);
             // 
             // button3
             // 
@@ -135,15 +129,49 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Polish",
+            "Russian"});
+            this.listBox1.Location = new System.Drawing.Point(458, 38);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(66, 147);
+            this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(580, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "translate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonTranslate_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(603, 137);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 285);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtFile);
             this.Controls.Add(this.lblFileName);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.btnClear);
@@ -163,13 +191,15 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Label lblFileName;
-        private System.Windows.Forms.RichTextBox txtFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

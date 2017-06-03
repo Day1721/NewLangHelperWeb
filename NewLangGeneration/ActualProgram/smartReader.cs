@@ -76,7 +76,7 @@ namespace NewLangGeneration
             }
            
             char currentStart = _endOfString[pointerToRead];
-            if (currentStart == (char)65535)
+            if (currentStart == (char)65535 || currentStart == (char)0)
             {
                 return null;
             }
@@ -101,6 +101,11 @@ namespace NewLangGeneration
             }
             return "";
         }
+        public void Close()
+        {
+            _file.Close();
+        }
+
 
     }
 }
