@@ -26,6 +26,8 @@ class CardGroup(models.Model):
     firstLanguage = models.CharField(max_length=100, default='PL')
     secondLanguage = models.CharField(max_length=100, default='EN')
 
+    public = models.BooleanField(default=False)
+
     hash = models.CharField(max_length=50, blank=True)
 
     class Meta:

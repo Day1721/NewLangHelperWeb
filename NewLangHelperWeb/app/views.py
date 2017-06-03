@@ -72,13 +72,14 @@ class GroupDetail(APIView):
 
     def get(self, request, pk, format=None):
         exists, group = group_exists(pk)
-        if request.user not in group.users.all():
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
 
         if not exists:
             return Response({
                 'error': 'Group does not exist.'
             }, status=status.HTTP_404_NOT_FOUND)
+
+        if request.user not in group.users.all() and not group.public:
+            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
 
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -167,7 +168,7 @@ class CardDetail(APIView):
 
         exists, group = group_exists(pk)
 
-        if request.user not in group.users.all():
+        if request.user not in group.users.all() and not group.public:
             return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
         if not exists:
             return Response({
