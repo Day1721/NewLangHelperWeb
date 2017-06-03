@@ -205,7 +205,6 @@ namespace NewLangGeneration
             file.WriteLine(JsonConvert.SerializeObject(resultToJson));
             file.Close();
             lbx.Items.Add("top"  + wordNumber.ToString() + "finished");
-            file = new StreamWriter("top1000.json");
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
