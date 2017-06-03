@@ -115,7 +115,7 @@ namespace NewLangGeneration
                 xx++;
                 string line2 = file.ReadLine();
                 long num = Int64.Parse(line2);
-                words.addWord(line, num);
+                words.AddWord(line, num);
             }
             TimeSpan ts = stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
@@ -132,7 +132,7 @@ namespace NewLangGeneration
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             long xx = 0;
-            var toSave = words.getStatistics();
+            var toSave = words.GetStatistics();
 
             foreach (var x in toSave)
             {
@@ -151,11 +151,11 @@ namespace NewLangGeneration
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             string fileName = (string)e.Argument;
-            smartReader reader = new smartReader(fileName);
+            SmartReader reader = new SmartReader(fileName);
             string nxt;
             while ((nxt = reader.nextChar()) != null)
             {
-                words.analyzeString(nxt);
+                words.AnalyzeString(nxt);
             }
 
         }
@@ -163,11 +163,11 @@ namespace NewLangGeneration
         private void thread_DoWork(object fileNameO)
         {
             string fileName = (string)fileNameO;
-            smartReader reader = new smartReader(fileName);
+            SmartReader reader = new SmartReader(fileName);
             string nxt;
             while ((nxt = reader.nextChar()) != null)
             {
-                words.analyzeString(nxt);
+                words.AnalyzeString(nxt);
             }
         }
 

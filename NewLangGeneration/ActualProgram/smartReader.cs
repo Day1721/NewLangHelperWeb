@@ -6,34 +6,34 @@ using System.Threading.Tasks;
 
 namespace NewLangGeneration
 {
-    class smartReader
+    class SmartReader
     {
-        private char[] endOfString;
+        private readonly char[] _endOfString;
 
-        private System.IO.StreamReader file;
+        private readonly System.IO.StreamReader _file;
         private int pointerToRead;
         private int pointerToWrite;
         const int max_len = 100;
         private int credit;
         private bool start;
 
-        public smartReader(string path)
+        public SmartReader(string path)
         {
-            file = new System.IO.StreamReader(path);
+            _file = new System.IO.StreamReader(path);
             credit = 0;
             pointerToRead = 0;
             start = true;
             pointerToWrite = 0;
-            endOfString = new char[max_len];
+            _endOfString = new char[max_len];
         }
         private void readForward()
         {
             while (credit<=22)
             {
                 char t;
-                if (!file.EndOfStream)
+                if (!_file.EndOfStream)
                 {
-                    t = (char)(file.Read());
+                    t = (char)(_file.Read());
                     if (Char.IsLetter(t))
                     {
                         t = Char.ToLower(t);
@@ -43,7 +43,7 @@ namespace NewLangGeneration
                 {
                     t = (char)(0);
                 }
-                endOfString[pointerToWrite] = t;
+                _endOfString[pointerToWrite] = t;
                 pointerToWrite++;
                 pointerToWrite %= max_len;
                 credit++;
@@ -54,13 +54,13 @@ namespace NewLangGeneration
             if (credit == 0)
             {
                 char t;
-                if ((t = (char)(file.Read())) != -1)
+                if ((t = (char)(_file.Read())) != -1)
                 {
                     if (Char.IsLetter(t))
                     {
                         t = Char.ToLower(t);
                     }
-                    endOfString[pointerToWrite] = t;
+                    _endOfString[pointerToWrite] = t;
                     pointerToWrite++;
                     pointerToWrite %= max_len;
                 }
@@ -75,7 +75,7 @@ namespace NewLangGeneration
                 credit--;
             }
            
-            char currentStart = endOfString[pointerToRead];
+            char currentStart = _endOfString[pointerToRead];
             if (currentStart == (char)65535)
             {
                 return null;
@@ -93,7 +93,7 @@ namespace NewLangGeneration
                 start = false;
                 while (wordToReturn.Count != 20)
                 {
-                    wordToReturn.Add(endOfString[i]);
+                    wordToReturn.Add(_endOfString[i]);
                     i++;
                     i %= max_len;
                 }
