@@ -204,7 +204,7 @@ namespace NewLangGeneration
             }
             file.WriteLine(JsonConvert.SerializeObject(resultToJson));
             file.Close();
-            lbx.Items.Add("top"  + wordNumber.ToString() + "finished");
+            lbx.Items.Add("top"  + wordNumber.ToString() + "finished ");
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -303,7 +303,7 @@ namespace NewLangGeneration
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            wordNumber = (int)listBox2.SelectedItem;
+            wordNumber = Int32.Parse((string)listBox2.SelectedItem);
         }
     }
 
