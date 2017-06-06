@@ -22,11 +22,12 @@
                     words: []
             }).then(
                 successResponce => {
-                    console.log(successResponce);
                     $location.path('/home');
                 },
                 errorResponce => {
-                    console.log(errorResponce);
+                    if (errorResponce.status === 400)
+                        alert(errorResponce.data.error);
+                    else alert('Error occurred, try again later');
                 });
         };
     }

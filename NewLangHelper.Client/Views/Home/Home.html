@@ -9,7 +9,7 @@
     <li ng-repeat="(name, list) in data">
         {{name}}
         <ul>
-            <li ng-repeat="group in list">
+            <li ng-if="list.length !== 0" ng-repeat="group in list">
                 <button ng-click="showGroupInfo(group.id)"  
                         class="btn-link">
                     {{group.name}}
@@ -27,11 +27,9 @@
                     </li>
                 </ul>
             </li>
+            <li ng-if="list.length === 0"></li>
         </ul>
     </li>
 </ul>
 
 <h3 ng-if="dataLength == 0">There is no groups</h3>
-<!--
-<div class="background-img"></div> //non-working image
--->

@@ -28,6 +28,7 @@ def get_group_from_hash(hash):
         return None
     return group.get()
 
+
 # UPDATE
 
 
@@ -41,7 +42,6 @@ def add_user_to_group_and_generate_hash(serializer, user):
     add_user_to_group(group, user)
     group.hash = random.getrandbits(128)
     group.save()
-
 
 def add_wordcards_to_group(wordcards, group):
     for word in wordcards:

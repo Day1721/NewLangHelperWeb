@@ -4,8 +4,6 @@
         browserName: 'firefox'
     }, {
         browserName: 'chrome'
-    }, {
-        browserName: 'internet explorer'
     }],
     specs: ['TitleTest.js', 'LoginTest.js']
 };

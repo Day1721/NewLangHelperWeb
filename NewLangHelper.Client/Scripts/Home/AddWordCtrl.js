@@ -5,9 +5,9 @@
         .module('home')
         .controller('AddWordCtrl', addWordCtrl);
 
-    addWordCtrl.$inject = ['$scope', '$location', 'localStorageService', 'serverUrl', 'http'];
+    addWordCtrl.$inject = ['$scope', '$location', 'localStorageService', 'http'];
 
-    function addWordCtrl($scope, $location, localStorage, serverUrl, http) {
+    function addWordCtrl($scope, $location, localStorage, http) {
         $scope.title = 'AddWordCtrl';
         const data = localStorage.get('data');
 
@@ -23,13 +23,11 @@
 
         $scope.extend = () => $scope.words.push({});
 
-        $scope.submit = () => 
-            http.post(`/groups/${$scope.data.selected.pk}/add-cards/`, $scope.words).then(
+        $scope.submit = () => http.post(`/groups/${$scope.data.selected.pk}/add-cards/`, $scope.words).then(
                 successResponce => {
                     $location.path('/home');
                 },
-                errorResponce => {
-                    console.log(errorResponce);
-                });
+                errorResponse => alert('Error occurred, try again later')
+            );
     }
 })();
