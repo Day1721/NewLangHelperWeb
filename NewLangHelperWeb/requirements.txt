@@ -7,6 +7,7 @@ django-oauth-toolkit==0.12.0
 django-pipeline==1.6.12
 django-rest-auth==0.9.1
 djangorestframework==3.6.2
+gunicorn==19.7.1
 numpy==1.12.1
 oauthlib==2.0.1
 psycopg2==2.7.1

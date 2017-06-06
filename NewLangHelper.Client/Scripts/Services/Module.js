@@ -4,7 +4,7 @@
     const app = angular.module('services', ['config']);
 
     app.service('http', httpService);
-    app.constant('serverUrl', 'http://localhost:8001');
+    app.constant('serverUrl', 'https://newlanghelper.herokuapp.com');
 
     httpService.$inject = ['$http', 'serverUrl', 'debug', '$location'];
 
