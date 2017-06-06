@@ -1,1 +1,1 @@
-web: gunicorn NewLangHelperWeb/wsgi:application --log-file -
+web: gunicorn NewLangHelperWeb.wsgi:application --log-file -
