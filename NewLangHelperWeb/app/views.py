@@ -3,32 +3,9 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from app.permissions import IsAuthenticatedOrOptions
+from app.permissions import IsAuthenticatedOrOptions, HasAccess
 from .DBHandler import DBHandler
 from .serializers import *
-
-
-def group_exists(pk):
-    group = DBHandler.get_group_from_id(pk)
-
-    if group is None:
-        return False, group
-
-    return True, group
-
-
-def word_exists(group_pk, pk):
-    exists, group = group_exists(group_pk)
-
-    if not exists:
-        return False, None
-
-    word = DBHandler.get_word_from_id(pk)
-
-    if word in DBHandler.get_words_from_group(group):
-        return True, word
-
-    return False, None
 
 
 # Usage (need to be logged in)
@@ -41,17 +18,17 @@ def word_exists(group_pk, pk):
 class GroupList(APIView):
     permission_classes = [IsAuthenticatedOrOptions]
 
-    def get(self, request, format=None):
+    def get(self, request):
         groups = DBHandler.get_groups_from_user(request.user)
         serializer = GroupSerializer(groups, many=True, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def post(self, request, format=None):
+    def post(self, request):
         serializer = GroupSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
-            if request.user.cardgroup_set.filter(name=request.data['name']).count() == 1:  # TODO dbhandler
+            if DBHandler.group_with_name_exists(request.user, request.data['name']):  # TODO dbhandler
                 return Response({
-                    'error': 'Group with the same name already exists.'
+                    'detail': 'Group with the same name already exists.'
                 }, status=status.HTTP_400_BAD_REQUEST)
 
             DBHandler.add_user_to_group_and_generate_hash(serializer, request.user)
@@ -68,31 +45,19 @@ class GroupList(APIView):
 
 
 class GroupDetail(APIView):
-    permission_classes = [IsAuthenticatedOrOptions]
+    permission_classes = [IsAuthenticatedOrOptions, HasAccess]
 
-    def get(self, request, pk, format=None):
-        exists, group = group_exists(pk)
+    def get(self, request, pk):
+        group = DBHandler.get_group_from_id(pk)
 
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        if request.user not in group.users.all() and not group.public:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
+        self.check_object_permissions(request, group)
 
         serializer = GroupSerializer(group, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def patch(self, request, pk):
-        exists, group = group_exists(pk)
-
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
         serializer = GroupSerializer(group, data=request.data, context={'request': request})
         if not serializer.is_valid():
@@ -101,14 +66,8 @@ class GroupDetail(APIView):
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
     def delete(self, request, pk):
-        exists, group = group_exists(pk)
-
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
         group.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
@@ -121,30 +80,18 @@ class GroupDetail(APIView):
 
 
 class AddCard(APIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly, HasAccess]
 
-    def get(self, request, pk, format=None):
-        exists, group = group_exists(pk)
-
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
+    def get(self, request, pk):
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
         serializer = WordSerializer(context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request, pk):
-        exists, group = group_exists(pk)
-
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
         serializer = WordSerializer(data=request.data, many=True, context={'request': request})
         if not serializer.is_valid():
@@ -162,41 +109,23 @@ class AddCard(APIView):
 
 
 class CardDetail(APIView):
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly, HasAccess]
 
     def get(self, request, pk, word_pk):
 
-        exists, group = group_exists(pk)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
-        if request.user not in group.users.all() and not group.public:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        exists, word = word_exists(pk, word_pk)
-
-        if not exists:
-            return Response({'error': 'Word does not exist in this group.'}, status=status.HTTP_404_NOT_FOUND)
+        word = DBHandler.get_word_from_id_group(word_pk, pk)
 
         serializer = WordSerializer(word, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def patch(self, request, pk, word_pk):
-        exists, group = group_exists(pk)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        exists, word = word_exists(pk, word_pk)
-
-        if not exists:
-            return Response({'error': 'Word does not exist in this group.'}, status=status.HTTP_404_NOT_FOUND)
+        word = DBHandler.get_word_from_id_group(word_pk, pk)
 
         serializer = WordSerializer(word, data=request.data, context={'request': request})
         if not serializer.is_valid():
@@ -206,26 +135,17 @@ class CardDetail(APIView):
 
     def delete(self, request, pk, word_pk):
 
-        exists, group = group_exists(pk)
+        group = DBHandler.get_group_from_id(pk)
+        self.check_object_permissions(request, group)
 
-        if request.user != group.user:
-            return Response({'error': 'You are not allowed to view this site.'}, status=status.HTTP_403_FORBIDDEN)
-        if not exists:
-            return Response({
-                'error': 'Group does not exist.'
-            }, status=status.HTTP_404_NOT_FOUND)
-
-        exists, word = word_exists(pk, word_pk)
-
-        if not exists:
-            return Response({'error': 'Word does not exist in this group.'}, status=status.HTTP_404_NOT_FOUND)
+        word = DBHandler.get_word_from_id_group(word_pk, pk)
 
         word.delete()
         return Response({}, status=status.HTTP_204_NO_CONTENT)
 
-
-# TODO wywalić te brzydkie rzeczy do funkcji
-
+#Usage
+# /invite/{hash}
+# GET : if hash corresponds to a group, user is added to this group
 
 class Invitation(APIView):
     permission_classes = [IsAuthenticatedOrOptions]
@@ -234,7 +154,7 @@ class Invitation(APIView):
         group = DBHandler.get_group_from_hash(hash)
 
         if group is None:
-            return Response({'error': 'Wrong invitation link.'}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'detail': 'Wrong invitation link.'}, status=status.HTTP_404_NOT_FOUND)
 
         DBHandler.add_user_to_group(group, request.user)
 

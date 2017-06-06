@@ -1,29 +1,25 @@
 from ..models import CardGroup, WordCard
 import random
-
+from django.shortcuts import get_object_or_404
 
 # READ
+
+
+def group_with_name_exists(user, name):
+    return user.cardgroup_set.filter(name=name).count() == 1
+
 
 def get_groups_from_user(user):
     return user.users_with_access.all()
 
 
-def get_words_from_group(group):
-    return group.words.all()
-
-
 def get_group_from_id(id):
-    group = CardGroup.objects.all().filter(id=id)
-    if not group:
-        return None
-    return group.get()
+    return get_object_or_404(CardGroup, pk=id)
 
 
-def get_word_from_id(id):
-    word = WordCard.objects.all().filter(id=id)
-    if not word:
-        return None
-    return word.get()
+def get_word_from_id_group(id, group_id):
+    group = get_group_from_id(group_id)
+    return get_object_or_404(group.words, pk=id)
 
 
 def get_group_from_hash(hash):
@@ -42,15 +38,11 @@ def add_user_to_group(group, user):
 
 def add_user_to_group_and_generate_hash(serializer, user):
     group = serializer.save(user=user)
-    group.users.add(user)
-    hash = random.getrandbits(128)
-    group.hash = hash
+    add_user_to_group(group, user)
+    group.hash = random.getrandbits(128)
     group.save()
 
 
-def add_wordcard_to_group(wordcard, group):
-    group.words.add(wordcard)
-
 def add_wordcards_to_group(wordcards, group):
     for word in wordcards:
-        add_wordcard_to_group(word, group)
+        group.words.add(word)

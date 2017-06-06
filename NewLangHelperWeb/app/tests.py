@@ -23,8 +23,6 @@ class GroupAuthenticationTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    #TODO same with post?
-
 
 class GroupCreateTests(APITestCase):
     def setUp(self):
@@ -49,11 +47,14 @@ class GroupCreateTests(APITestCase):
             'firstLanguage': 'PL',
             'words': [],
             'name': 'Testgroup',
-            'secondLanguage': 'EN'
+            'secondLanguage': 'EN',
+            'public': False
         }
 
         del (response.data['pk'])
         del (response.data['url'])
+        del (response.data['hash'])
+
 
         self.assertEqual(response.data, data)
 
@@ -73,11 +74,13 @@ class GroupCreateTests(APITestCase):
             'firstLanguage': 'TestLang',
             'words': [],
             'name': 'Testgroup',
-            'secondLanguage': 'TestLang2'
+            'secondLanguage': 'TestLang2',
+            'public': False
         }
 
-        del(response.data['pk'])
-        del(response.data['url'])
+        del (response.data['pk'])
+        del (response.data['url'])
+        del (response.data['hash'])
 
         self.assertEqual(response.data, data)
 
@@ -103,7 +106,8 @@ class GroupCreateTests(APITestCase):
         data = {
             'name': 'Testgroup',
             'garbage': 'field',
-            'not': 'important'
+            'not': 'important',
+            'public': True
         }
 
         response = self.client.post(self.url, data, format='json')
@@ -114,11 +118,13 @@ class GroupCreateTests(APITestCase):
             'firstLanguage': 'PL',
             'words': [],
             'name': 'Testgroup',
-            'secondLanguage': 'EN'
+            'secondLanguage': 'EN',
+            'public': True
         }
 
         del (response.data['pk'])
         del (response.data['url'])
+        del (response.data['hash'])
 
         self.assertEqual(response.data, data)
 
@@ -139,5 +145,3 @@ class GroupGetTests(APITestCase):
         response = self.client.get(self.url, format='json')
 
         self.assertEqual(response.data, [])
-
-    #TODO get one group/more groups
