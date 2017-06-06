@@ -40,13 +40,13 @@
             }
         });
 
-        function handler(error, responce) {
-            if (debug) console.log(responce);
+        function handler(error, response) {
+            if (debug) console.log(response);
             if (response.status === 403) {
                 $location.path('/login');
                 $location.replace();
             }
-            error(responce);
+            error(response);
         }
     }
 })();
