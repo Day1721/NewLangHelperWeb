@@ -31,7 +31,6 @@
                     $location.replace();
                 },
                 function error(response) {
-                    //alert(`ERROR, code = ${response.status}`);
                     if (response.status === 400) {
                         $scope.error = response.data;
                     }

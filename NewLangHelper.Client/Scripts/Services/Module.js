@@ -6,13 +6,15 @@
     app.service('http', httpService);
     app.constant('serverUrl', 'http://localhost:8001');
 
-    httpService.$inject = ['$http', 'serverUrl', 'debug'];
+    httpService.$inject = ['$http', 'serverUrl', 'debug', '$location'];
 
-    function httpService($http, serverUrl, debug) {
+
+    function httpService($http, serverUrl, debug, $location) {
         this.get = path => ({
             then: (success, error) => {
                 $http.get(`${serverUrl}${path}`).then(
-                    success, response => handler(error, response)
+                    success,
+                    response => handler(error, response)
                 );
             }
         });
@@ -26,8 +28,24 @@
             }
         });
 
+        this.delete = path => ({
+            then: (success, error) => {
+                $http({
+                    method: 'DELETE',
+                    url: `${serverUrl}${path}`
+                }).then(
+                    success,
+                    response => handler(error, response)
+                );
+            }
+        });
+
         function handler(error, responce) {
             if (debug) console.log(responce);
+            if (response.status === 403) {
+                $location.path('/login');
+                $location.replace();
+            }
             error(responce);
         }
     }

@@ -6,9 +6,9 @@
         .controller('HomeCtrl', homeCtrl);
 
     homeCtrl.$inject =
-        ['$scope', '$http', '$location', 'localStorageService', 'serverUrl', '$route'];
+        ['$scope', 'http', '$location', 'localStorageService', '$route'];
 
-    function homeCtrl($scope, $http, $location, localStorage, serverUrl, $route) {
+    function homeCtrl($scope, http, $location, localStorage, $route) {
         if (!$scope.isLogged) {
             $location.path('/login');
             return;
@@ -29,32 +29,26 @@
         $scope.isLoading = true;
 
         $scope.deleteGroup = id => {
-            $http({
-                method: 'DELETE',
-                url: `${serverUrl}/groups/${id}/`
-            }).then(
+            http.delete(`/groups/${id}/`).then(
                 successResponce => {
                     alert('Group deleted successfully.');
                     $route.reload();
-                }, console.log);
+                },
+                toLoginIf403
+            );
         };
 
         $scope.deleteCard = (groupId, id) => {
-            $http({
-                method: 'DELETE',
-                url: `${serverUrl}/groups/${groupId}/word/${id}/`
-            }).then(
+            http.delete(`/groups/${groupId}/word/${id}/`).then(
                 sucessResponce => {
                     alert('Card deleted successfully.');
                     $route.reload();
                 },
-                console.log);
+                toLoginIf403
+            );
         };
 
-        $http({
-            method: 'GET',
-            url: `${serverUrl}/groups/`  //maybe TODO
-        }).then(
+        http.get('/groups').then(
             successResponce => {
                 successResponce.data.forEach(elem => {
                     elem.id = elem.pk;
@@ -67,15 +61,14 @@
 
                 $scope.isLoading = false;
                 console.log(data);
-            }, toLoginIf403);
+            },
+            toLoginIf403
+        );
 
 
 
         function toLoginIf403(response) {
-            if (response.status === 403) {
-                $location.path('/login');
-                $location.replace();
-            }
+            alert('Error occurred, try again later');
         }
 
         function groupby(list) {

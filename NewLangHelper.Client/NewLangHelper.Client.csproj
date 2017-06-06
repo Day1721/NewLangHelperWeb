@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Index.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Images\lang1.jpg" />
@@ -329,6 +330,7 @@
     <Content Include="node_modules\angular-local-storage\package.json" />
     <Content Include="node_modules\angular-local-storage\README.md" />
     <Content Include="node_modules\angular-local-storage\test\.jshintrc" />
+    <None Include="Properties\PublishProfiles\NewLangHelper - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

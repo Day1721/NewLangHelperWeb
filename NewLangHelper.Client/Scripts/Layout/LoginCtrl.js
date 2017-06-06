@@ -8,12 +8,6 @@
     loginCtrl.$inject = ['$scope', '$rootScope', 'http', '$location', '$cookies'];
 
     function loginCtrl($scope, $rootScope, http, $location, $cookies) {
-        /*if ($cookies.get('token') !== '' && $rootScope.isLogged) {
-            //TRY to go home, if redirect back, isLogged will be false
-            $location.path('/home');
-            $location.replace();
-        }*/
-
         $rootScope.isLogged = false;
         $rootScope.username = '';
         $cookies.remove('token');
@@ -34,7 +28,7 @@
                     $rootScope.isLogged = true;
 
                     $location.path('/home');
-                    $location.replace();
+                    $location.replace();    //not allow to go back to login 
                 },
                 errorResponse => {
                     if (errorResponse.status === 400) {

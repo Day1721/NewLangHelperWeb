@@ -8,7 +8,7 @@
     logoutCtrl.$inject = ['$scope', '$rootScope', '$cookies', '$location'];
 
     function logoutCtrl($scope, $rootScope, $cookies, $location) {
-        /*$scope.title = 'LogoutCtrl';*/
+        $scope.title = 'LogoutCtrl';
 
         $rootScope.isLogged = false;
         $rootScope.username = '';

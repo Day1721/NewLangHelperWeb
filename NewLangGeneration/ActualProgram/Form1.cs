@@ -306,10 +306,4 @@ namespace NewLangGeneration
             wordNumber = Int32.Parse((string)listBox2.SelectedItem);
         }
     }
-
-    
-
-
-
-
 }
