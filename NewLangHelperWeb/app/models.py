@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Definition of models.
 """
@@ -14,7 +15,7 @@ class WordCard(models.Model):
 
 
 class CardGroup(models.Model):
-    user = models.ForeignKey(User)
+    owner = models.ForeignKey(User)
     name = models.CharField(max_length=100)
 
     # każde słowo może należeć do wielu grup i każda grupa może mieć wiele słów
@@ -32,4 +33,4 @@ class CardGroup(models.Model):
 
     class Meta:
         # kazdy uzytkownik moze miec jedna grupe o danej nazwie
-        unique_together = ('user', 'name')
+        unique_together = ('owner', 'name')

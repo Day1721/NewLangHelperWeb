@@ -4,7 +4,7 @@
     const app = angular.module('config', ['ngRoute', 'ngCookies', 'LocalStorageModule']);
 
     app.config(config)
-        .constant('debug', false)
+        .constant('debug', true)
         .constant('loginPath', 'Views/Layout/LoginPartial.html');
 
     config.$inject = ['$httpProvider', '$locationProvider', 'localStorageServiceProvider'];

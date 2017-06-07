@@ -34,7 +34,7 @@
                     if (errorResponse.status === 400) {
                         alert('Incorrect login or password');
                     }
-                    console.log(errorResponse);
+                    else alert('Error occurred, please try again later');
                 });
         };
     }

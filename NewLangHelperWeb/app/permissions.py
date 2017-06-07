@@ -19,6 +19,6 @@ class HasAccess(BasePermission):
         if request.method == 'GET':
             return request.user in obj.users.all() or obj.public
 
-        return type(obj) is WordCard or request.user == obj.user
+        return type(obj) is WordCard or request.user == obj.owner
 
 

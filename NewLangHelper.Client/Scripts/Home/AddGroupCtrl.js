@@ -26,7 +26,7 @@
                 },
                 errorResponce => {
                     if (errorResponce.status === 400)
-                        alert(errorResponce.data.error);
+                        alert(errorResponce.data.detail);
                     else alert('Error occurred, try again later');
                 });
         };

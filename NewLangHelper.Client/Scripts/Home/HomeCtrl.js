@@ -48,7 +48,7 @@
             );
         };
 
-        http.get('/groups').then(
+        http.get('/groups/').then(
             successResponce => {
                 successResponce.data.forEach(elem => {
                     elem.id = elem.pk;

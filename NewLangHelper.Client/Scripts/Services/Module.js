@@ -4,7 +4,7 @@
     const app = angular.module('services', ['config']);
 
     app.service('http', httpService);
-    app.constant('serverUrl', 'http://localhost:8001');
+    app.constant('serverUrl', 'https://newlanghelper.herokuapp.com');
 
     httpService.$inject = ['$http', 'serverUrl', 'debug', '$location'];
 
@@ -40,13 +40,13 @@
             }
         });
 
-        function handler(error, responce) {
-            if (debug) console.log(responce);
+        function handler(error, response) {
+            if (debug) console.log(response);
             if (response.status === 403) {
                 $location.path('/login');
                 $location.replace();
             }
-            error(responce);
+            error(response);
         }
     }
 })();
