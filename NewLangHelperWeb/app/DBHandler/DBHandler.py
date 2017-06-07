@@ -42,7 +42,7 @@ def add_user_to_group(group, user):
 
 
 def add_user_to_group_and_generate_hash(serializer, user):
-    group = serializer.save(user=user)
+    group = serializer.save(owner=user)
     add_user_to_group(group, user)
     group.hash = random.getrandbits(128)
     group.save()
