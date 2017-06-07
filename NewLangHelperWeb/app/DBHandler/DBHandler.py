@@ -1,6 +1,7 @@
 from ..models import CardGroup, WordCard
 import random
 from django.shortcuts import get_object_or_404
+from itertools import chain
 
 # READ
 
@@ -10,7 +11,10 @@ def group_with_name_exists(user, name):
 
 
 def get_groups_from_user(user):
-    return user.users_with_access.all()
+    groups = CardGroup.objects.all().filter(public=True)
+
+    result_list = list(chain(groups, user.users_with_access.all()))
+    return result_list
 
 
 def get_group_from_id(id):
